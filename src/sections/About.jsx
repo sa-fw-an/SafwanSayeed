@@ -25,7 +25,8 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I’m Safwan Sayeed</p>
               <p className="grid-subtext">
-                I am an Undergrad Student, who loves coding. Works on Web, Game, and Android application development
+              I am an undergraduate student passionate about coding, specializing in web, game, and Android application development. 
+              I enjoy exploring innovative solutions and creating engaging experiences through technology.
               </p>
             </div>
           </div>
@@ -38,8 +39,8 @@ const About = () => {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                applications
+              I specialize in a diverse range of languages, frameworks, and tools to build robust and scalable applications. 
+              My focus is on creating dynamic user experiences, powerful backend logic, and efficient data management while utilizing modern development tools for seamless deployment.
               </p>
             </div>
           </div>
@@ -75,8 +76,11 @@ const About = () => {
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
               <p className="grid-subtext">
-                I love solving problems and building things through code. Programming isn&apos;t just my
-                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
+              I love solving problems and building innovative solutions through code. 
+              Programming is not just my profession; it's my passion. 
+              I enjoy exploring new technologies and continuously enhancing my skills. 
+              In my free time, I engage in competitive coding to sharpen my problem-solving abilities and practice ethical hacking to understand security challenges better, 
+              all while working on personal projects to create impactful applications.
               </p>
             </div>
           </div>
