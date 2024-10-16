@@ -18,6 +18,11 @@ const Footer = () => {
             <img src="./assets/linkedin.svg" alt="linkedin" className="w-1/2 h-1/2" />
           </a>
         </div>
+        <div className="social-icon">
+          <a href="https://x.com/safwan_say" target="_blank">
+            <img src="./assets/twitter.svg" alt="twitter" className="w-1/2 h-1/2" />
+          </a>
+        </div>
       </div>
 
       <p className="text-white-500">© 2024 Safwan Sayeed. All rights reserved.</p>
