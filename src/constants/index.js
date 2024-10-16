@@ -123,6 +123,28 @@ export const myProjects = [
     ],
   },
   {
+    title: 'Snake Game',
+    desc: 'Snake Game is a modern take on the classic arcade game where players guide a snake to collect food and grow longer while avoiding obstacles.',
+    subdesc:
+      'Built with Python and Pygame, this game challenges players to navigate a snake using simple controls while collecting food and increasing in size. The objective is to survive as long as possible without hitting the walls or the snakes own body. With vibrant visuals and smooth gameplay, Snake Game offers a fun, nostalgic experience for all ages.',
+    href: 'https://github.com/sa-fw-an/SnakeGame',
+    texture: './textures/project/snakegame.mp4',
+    logo: './assets/snakegame.png',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: './assets/spotlight3.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Python',
+        path: './assets/python.svg',
+      },
+    ],
+  },
+  {
     title: 'BirthdayWish',
     desc: 'BirthdayWish is a vibrant web application designed to help you send heartfelt birthday wishes to your loved ones.',
     subdesc:
