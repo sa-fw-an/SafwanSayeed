@@ -40,7 +40,7 @@ export const myProjects = [
       'This portfolio features a collection of cool and interactive 3D models, allowing users to explore and engage with each design. Built with HTML, CSS, JavaScript, and other cutting-edge technologies, the site ensures a seamless experience across devices, highlighting creativity and technical prowess in 3D modeling and web development.',
     href: 'https://github.com/sa-fw-an/Portfolio',
     texture: './textures/project/3dportfolio.mp4',
-    logo: './assets/project-logo5.png',
+    logo: './assets/portfolio.png',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
