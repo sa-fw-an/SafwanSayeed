@@ -33,7 +33,7 @@ Welcome to my portfolio! This project showcases my skills and work as a develope
 
 ## Live Demo
 
-Check out the live version of my portfolio [https://sa-fw-an.github.io/SafwanSayeed/]
+Check out the live version of my portfolio [here](https://sa-fw-an.github.io/SafwanSayeed/)
 
 ## Acknowledgments
 
@@ -46,8 +46,9 @@ Check out the live version of my portfolio [https://sa-fw-an.github.io/SafwanSay
 
 If you have any questions or would like to get in touch, feel free to reach out:
 
-- Email: [isafwansayeed@gmail.com]
-- GitHub: [https://github.com/sa-fw-an/ ]
-- LinkedIn: [https://www.linkedin.com/in/safwan-sayeed-6a3a482a9]
+- Email: **isafwansayeed@gmail.com**
+- GitHub: **https://github.com/sa-fw-an/**
+- LinkedIn: **https://www.linkedin.com/in/safwan-sayeed-6a3a482a9**
+- Twitter: **https://x.com/safwan_say**
 
 Thank you for visiting my portfolio!
