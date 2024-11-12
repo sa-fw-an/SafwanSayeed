@@ -39,8 +39,6 @@ jobs:
     - name: Deploy to GitHub Pages
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       run: |
-        git add dist
-        git commit -m "Deploy to GitHub Pages"
-        git push origin gh-pages
+        npm run deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
