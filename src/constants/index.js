@@ -167,6 +167,28 @@ export const myProjects = [
     ],
   },
   {
+    title: 'Generate Fake GitHub Contributions',
+    desc: 'A script to simulate a more active GitHub profile by creating random commit activity over a defined date range, enhancing profile visuals with commit streaks.',
+    subdesc:
+      'This script lets users generate commits on random dates to give the appearance of consistent activity on their GitHub profile. With options to set the number of commits per day, it pushes these to the main branch and cleans up afterward for a seamless look. Ideal for enhancing profile aesthetics, this tool offers flexibility while respecting ethical use boundaries.',
+    href: 'https://github.com/sa-fw-an/GitFakeContribution',
+    texture: './textures/project/gitcontribution.mp4',
+    logo: './assets/gitcontribution-logo.png',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: './assets/spotlight3.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Python',
+        path: './assets/python.svg',
+      },
+    ],
+  },
+  {
     title: 'BirthdayWish',
     desc: 'BirthdayWish is a vibrant web application designed to help you send heartfelt birthday wishes to your loved ones.',
     subdesc:
