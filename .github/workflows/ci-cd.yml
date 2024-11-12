@@ -39,7 +39,6 @@ jobs:
     - name: Deploy to GitHub Pages
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       run: |
-        git worktree add dist origin/gh-pages
         git add dist
         git commit -m "Deploy to GitHub Pages"
         git push origin gh-pages
