@@ -87,7 +87,7 @@ export const myProjects = [
       'This GitHub readme highlights core skills, active project contributions, and connection links with embedded stats, technology icons, and dynamic features like a custom snake animation tracking profile contributions. Built with Markdown, custom icons, and GitHub Actions, it offers an engaging overview, providing visitors with a clear sense of expertise and activity in web and blockchain development, among other areas. Perfect for staying connected and showcasing coding contributions in a fun, dynamic way.',
     href: 'https://github.com/sa-fw-an/sa-fw-an',
     texture: './textures/project/gitreadme.mp4',
-    logo: './assets/gitreadme.jpeg',
+    logo: './assets/gitreadme-logo.jpeg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
