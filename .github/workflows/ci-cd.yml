@@ -32,9 +32,16 @@ jobs:
         git config --global user.email "${{ secrets.USER_EMAIL }}"
         git config --global user.name "${{ secrets.USER_NAME }}"
 
+    - name: Add custom domain (CNAME file)
+      run: |
+        echo 'safwansayeed.live' > dist/CNAME
+
     - name: Deploy to GitHub Pages
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       run: |
-        npm run deploy
+        git worktree add dist origin/gh-pages
+        git add dist
+        git commit -m "Deploy to GitHub Pages"
+        git push origin gh-pages
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
