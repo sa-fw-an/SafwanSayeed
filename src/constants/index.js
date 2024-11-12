@@ -81,6 +81,28 @@ export const myProjects = [
     ],
   },
   {
+    title: 'GitHub Profile Readme',
+    desc: 'A personal and interactive GitHub profile readme showcasing skills, projects, and achievements through visually engaging elements.',
+    subdesc:
+      'This GitHub readme highlights core skills, active project contributions, and connection links with embedded stats, technology icons, and dynamic features like a custom snake animation tracking profile contributions. Built with Markdown, custom icons, and GitHub Actions, it offers an engaging overview, providing visitors with a clear sense of expertise and activity in web and blockchain development, among other areas. Perfect for staying connected and showcasing coding contributions in a fun, dynamic way.',
+    href: 'https://github.com/sa-fw-an/sa-fw-an',
+    texture: './textures/project/gitreadme.mp4',
+    logo: './assets/gitreadme.jpeg',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: './assets/spotlight2.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Html',
+        path: './assets/html.svg',
+      },
+    ],
+  },
+  {
     title: 'Flask Blog',
     desc: 'A dynamic blog website developed using Flask, featuring SQL for database management and a user-friendly interface built with HTML and CSS.',
     subdesc:
