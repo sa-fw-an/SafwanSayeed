@@ -2,9 +2,9 @@ const Footer = () => {
   return (
     <footer className="c-space pt-7 pb-4 border-t border-gray-700 flex justify-between items-center flex-wrap gap-5 bg-black text-gray-400">
       <div className="text-gray-500 text-center text-sm mt-2 sm:mt-0 flex justify-center items-center gap-2">
-        <p className="hover:underline cursor-pointer">Terms & Conditions</p>
+        <p>Terms & Conditions</p>
         <span>|</span>
-        <p className="hover:underline cursor-pointer">Privacy Policy</p>
+        <p>Privacy Policy</p>
       </div>
 
       <div className="flex gap-3 items-center">
