@@ -29,7 +29,7 @@ Welcome to my portfolio! This project showcases my skills and work as a develope
   - Tailwind CSS
 
 - **Hosting:**
-  - [GitHub Pages] 
+  - GitHub Pages
 
 ## Live Demo
 
