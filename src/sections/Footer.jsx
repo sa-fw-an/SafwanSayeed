@@ -24,7 +24,7 @@ const Footer = () => {
 
           <a href="https://x.com/safwan_say" target="_blank" rel="noopener noreferrer" className="social-icon">
             <p className="hover:transform hover:scale-105 hover:translate-y-[-3px]  transition-transform duration-500 ease-in-out">
-              <img src="./assets/twitter.svg" alt="twitter" className="h-6 w-6" />
+              <img src="./assets/x.svg" alt="twitter" className="h-6 w-6" />
             </p>
           </a>
 
