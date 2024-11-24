@@ -74,7 +74,7 @@ const Contact = () => {
         <div className="contact-container">
           <h3 className="head-text">Let's talk</h3>
           <p className="text-lg text-white-600 mt-3">
-          Looking to create a dynamic web platform 🌐, build immersive games 🎮, or launch a cutting-edge Android app 📱? I’m here to bring your ideas to life!
+          Looking to create a dynamic web platform 🌐, build immersive games 🎮, or launch a cutting-edge Android app 📱? I'm here to bring your ideas to life!
           </p>
 
           <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
