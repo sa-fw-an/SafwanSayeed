@@ -8,7 +8,7 @@ const Footer = () => {
       </div>
 
       <div className="flex gap-3 items-center">
-        <div className="flex gap-4">
+        <div className="flex gap-5">
 
           <a href="https://github.com/sa-fw-an/" target="_blank" rel="noopener noreferrer" className="social-icon">
             <p className="hover:transform hover:scale-105 hover:translate-y-[-3px]  transition-transform duration-500 ease-in-out">
@@ -27,9 +27,15 @@ const Footer = () => {
               <img src="./assets/x.svg" alt="x" className="h-6 w-6" />
             </p>
           </a>
+          
+          <a href="https://reddit.com/u/safwan_say" target="_blank" rel="noopener noreferrer" className="social-icon">
+            <p className="hover:transform hover:scale-105 hover:translate-y-[-3px]  transition-transform duration-500 ease-in-out">
+              <img src="./assets/reddit.svg" alt="reddit" className="h-6 w-6" />
+            </p>
+          </a>
 
           <div className="visit-counter-box flex items-center gap-2 bg-gray-800 text-gray-300 p-2 rounded-lg shadow-sm">
-            <span className="text-sm font-medium">🤵Portfolio Views</span>
+            <span className="text-sm font-medium">🤵Views</span>
             <img src="https://hits.sh/safwansayeed.live.svg?style=round&label= &color=black" alt="visitor count" className="h-5 w-6" />
           </div>
 
