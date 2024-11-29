@@ -12,25 +12,25 @@ const Footer = () => {
 
           <a href="https://github.com/sa-fw-an/" target="_blank" rel="noopener noreferrer" className="social-icon">
             <p className="hover:transform hover:scale-105 hover:translate-y-[-3px]  transition-transform duration-500 ease-in-out">
-              <img src="./assets/github.svg" alt="github" className="h-6 w-6" />
+              <img src="./assets/social/github.svg" alt="github" className="h-6 w-6" />
             </p>
           </a>
 
           <a href="https://www.linkedin.com/in/safwan-sayeed-6a3a482a9" target="_blank" rel="noopener noreferrer" className="social-icon">
             <p className="hover:transform hover:scale-105 hover:translate-y-[-3px]  transition-transform duration-500 ease-in-out">
-              <img src="./assets/linkedin.svg" alt="linkedin" className="h-6 w-6" />
+              <img src="./assets/social/linkedin.svg" alt="linkedin" className="h-6 w-6" />
             </p>
           </a>
 
           <a href="https://x.com/safwan_say" target="_blank" rel="noopener noreferrer" className="social-icon">
             <p className="hover:transform hover:scale-105 hover:translate-y-[-3px]  transition-transform duration-500 ease-in-out">
-              <img src="./assets/x.svg" alt="x" className="h-6 w-6" />
+              <img src="./assets/social/x.svg" alt="x" className="h-6 w-6" />
             </p>
           </a>
           
           <a href="https://reddit.com/u/safwan_say" target="_blank" rel="noopener noreferrer" className="social-icon">
             <p className="hover:transform hover:scale-105 hover:translate-y-[-3px]  transition-transform duration-500 ease-in-out">
-              <img src="./assets/reddit.svg" alt="reddit" className="h-6 w-6" />
+              <img src="./assets/social/reddit.svg" alt="reddit" className="h-6 w-6" />
             </p>
           </a>
 

@@ -40,7 +40,7 @@ export const myProjects = [
       'This portfolio features a collection of cool and interactive 3D models, allowing users to explore and engage with each design. Built with HTML, CSS, JavaScript, and other cutting-edge technologies, the site ensures a seamless experience across devices, highlighting creativity and technical prowess in 3D modeling and web development.',
     href: 'https://github.com/sa-fw-an/Portfolio',
     texture: './textures/project/3dportfolio.mp4',
-    logo: './assets/portfolio.png',
+    logo: './assets/project/portfolio-logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -51,32 +51,32 @@ export const myProjects = [
       {
         id: 1,
         name: 'React.js',
-        path: './assets/react.svg',
+        path: './assets/coding/react.svg',
       },
       {
         id: 2,
         name: 'TailwindCSS',
-        path: './assets/tailwindcss.png',
+        path: './assets/coding/tailwind.svg',
       },
       {
         id: 3,
         name: 'JavaScript',
-        path: './assets/javascript.svg',
+        path: './assets/coding/javascript.svg',
       },
       {
         id: 4,
         name: 'Html',
-        path: './assets/html.svg',
+        path: './assets/coding/html.svg',
       },
       {
         id: 5,
         name: 'Vite',
-        path: './assets/vite.svg',
+        path: './assets/coding/vite.svg',
       },
       {
         id: 6,
         name: 'Framer Motion',
-        path: './assets/framer.png',
+        path: './assets/coding/framer.svg',
       },
     ],
   },
@@ -87,7 +87,7 @@ export const myProjects = [
       'This GitHub readme highlights core skills, active project contributions, and connection links with embedded stats, technology icons, and dynamic features like a custom snake animation tracking profile contributions. Built with Markdown, custom icons, and GitHub Actions, it offers an engaging overview, providing visitors with a clear sense of expertise and activity in web and blockchain development, among other areas. Perfect for staying connected and showcasing coding contributions in a fun, dynamic way.',
     href: 'https://github.com/sa-fw-an/sa-fw-an',
     texture: './textures/project/gitreadme.mp4',
-    logo: './assets/gitreadme-logo.jpeg',
+    logo: './assets/project/gitreadme-logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -98,7 +98,7 @@ export const myProjects = [
       {
         id: 1,
         name: 'Html',
-        path: './assets/html.svg',
+        path: './assets/coding/html.svg',
       },
     ],
   },
@@ -109,7 +109,7 @@ export const myProjects = [
       'This blog application allows users to create, update, delete, and link posts effortlessly. With a clean and responsive design, users can easily navigate through articles, engage with content, and manage their posts seamlessly. The integration of SQL ensures efficient data handling, making it a robust platform for blogging.',
     href: 'https://github.com/sa-fw-an/Blog',
     texture: './textures/project/blog.mp4',
-    logo: './assets/flask.png',
+    logo: './assets/project/blog-logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -120,27 +120,27 @@ export const myProjects = [
       {
         id: 1,
         name: 'Python',
-        path: './assets/python.svg',
+        path: './assets/coding/python.svg',
       },
       {
         id: 2,
         name: 'Html',
-        path: './assets/html.svg',
+        path: './assets/coding/html.svg',
       },
       {
         id: 3,
         name: 'CSS',
-        path: './assets/css.svg',
+        path: './assets/coding/css.svg',
       },
       {
         id: 4,
         name: 'Flask',
-        path: './assets/flask.png',
+        path: './assets/coding/flask.svg',
       },
       {
         id: 5,
         name: 'SQL',
-        path: './assets/sql.png',
+        path: './assets/coding/sql.svg',
       },
     ],
   },
@@ -151,7 +151,7 @@ export const myProjects = [
       'Built with Python and Pygame, this game challenges players to navigate a snake using simple controls while collecting food and increasing in size. The objective is to survive as long as possible without hitting the walls or the snakes own body. With vibrant visuals and smooth gameplay, Snake Game offers a fun, nostalgic experience for all ages.',
     href: 'https://github.com/sa-fw-an/SnakeGame',
     texture: './textures/project/snakegame.mp4',
-    logo: './assets/snakegame.png',
+    logo: './assets/project/snake-logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -162,7 +162,7 @@ export const myProjects = [
       {
         id: 1,
         name: 'Python',
-        path: './assets/python.svg',
+        path: './assets/coding/python.svg',
       },
     ],
   },
@@ -173,7 +173,7 @@ export const myProjects = [
       'This script lets users generate commits on random dates to give the appearance of consistent activity on their GitHub profile. With options to set the number of commits per day, it pushes these to the main branch and cleans up afterward for a seamless look. Ideal for enhancing profile aesthetics, this tool offers flexibility while respecting ethical use boundaries.',
     href: 'https://github.com/sa-fw-an/GitFakeContribution',
     texture: './textures/project/gitcontribution.mp4',
-    logo: './assets/gitcontribution-logo.png',
+    logo: './assets/project/gitcontributions-logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -184,7 +184,7 @@ export const myProjects = [
       {
         id: 1,
         name: 'Python',
-        path: './assets/python.svg',
+        path: './assets/coding/python.svg',
       },
     ],
   },
@@ -195,28 +195,28 @@ export const myProjects = [
       'Featuring lively music and captivating animations, the website allows users to create personalized birthday messages that are both fun and memorable. Built using HTML, CSS, and JavaScript, BirthdayWish combines creativity with technology, making it easy to celebrate special moments with style.',
     href: 'https://sa-fw-an.github.io/BirthdayWish/',
     texture: './textures/project/birthday.mp4',
-    logo: './assets/birthday-logo.png',
+    logo: './assets/project/birthday-logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
-    spotlight: './assets/spotlight1.png',
+    spotlight: './assets/coding/spotlight1.png',
     tags: [
       {
         id: 1,
         name: 'Html',
-        path: './assets/html.svg',
+        path: './assets/coding/html.svg',
       },
       {
         id: 2,
         name: 'CSS',
-        path: './assets/css.svg',
+        path: './assets/coding/css.svg',
       },
       {
         id: 3,
         name: 'JavaScript',
-        path: './assets/javascript.svg',
+        path: './assets/coding/javascript.svg',
       },
     ],
   },
@@ -227,7 +227,7 @@ export const myProjects = [
       'With advanced augmented reality (AR) technology, WatchTry lets users browse through an extensive collection of watches, select their favorites, and see them in real time. The app provides a user-friendly interface, detailed watch specifications, and the option to share their virtual try-ons with friends, making the watch shopping experience engaging and informed.',
     href: 'https://github.com/sa-fw-an/ARTryOn',
     texture: './textures/project/watch.mp4',
-    logo: './assets/watch-logo.png',
+    logo: './assets/project/watch-logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -238,12 +238,12 @@ export const myProjects = [
       {
         id: 1,
         name: 'C#',
-        path: './assets/csharp.svg',
+        path: './assets/coding/csharp.svg',
       },
       {
         id: 2,
         name: 'Unity',
-        path: './assets/unity.svg',
+        path: './assets/coding/unity.svg',
       },
     ],
   },
@@ -267,7 +267,7 @@ export const workExperiences = [
     pos: 'Software Web Developer',
     duration: '2024- 1 Month',
     title: "Developed a web application using Django for the backend and Next.js for the frontend.The project features a user authentication system with registration and login capabilities. I implemented a calculator to assess the environmental impact and calculate the renewability factor for companies. Additionally, I designed and built the entire database from scratch, ensuring efficient data management and retrieval. This project highlights my skills in full-stack development and database management.",
-    icon: './assets/firevera.jpg',
+    icon: './assets/work/firevera.jpg',
     animation: 'salute',
   },
   /*{
