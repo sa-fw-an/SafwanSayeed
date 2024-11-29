@@ -37,7 +37,7 @@ export const myProjects = [
     title: '3D Web Models Portfolio',
     desc: 'A visually stunning portfolio showcasing intricate 3D web models with a focus on responsive design and exceptional user interface.',
     subdesc:
-      'This portfolio features a collection of cool and interactive 3D models, allowing users to explore and engage with each design. Built with HTML, CSS, JavaScript, and other cutting-edge technologies, the site ensures a seamless experience across devices, highlighting creativity and technical prowess in 3D modeling and web development.',
+    'This portfolio features a collection of cool and interactive 3D models, allowing users to explore and engage with each design. Built with HTML, CSS, JavaScript, and other cutting-edge technologies, the site ensures a seamless experience across devices, highlighting creativity and technical prowess in 3D modeling and web development.',
     href: 'https://github.com/sa-fw-an/Portfolio',
     texture: './textures/project/3dportfolio.mp4',
     logo: './assets/project/portfolio-logo.svg',
@@ -81,6 +81,68 @@ export const myProjects = [
     ],
   },
   {
+    title: 'MERN Chat App',
+    desc: 'A real-time chat application built with the MERN stack, featuring user authentication, private messaging, and dynamic updates.',
+    subdesc:
+      'This chat app allows users to create accounts, log in securely, and chat with friends in real time. With a clean and intuitive interface, users can send messages, view online status, and receive notifications for new messages. The app is built with MongoDB, Express.js, React.js, and Node.js, ensuring a seamless experience for users to connect and communicate.',
+    href: 'https://github.com/sa-fw-an/ChatApp',
+    texture: './textures/project/chatapp.mp4',
+    logo: './assets/project/chatapp-logo.svg',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: './assets/spotlight4.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: './assets/coding/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: './assets/coding/tailwind.svg',
+      },
+      {
+        id: 3,
+        name: 'JavaScript',
+        path: './assets/coding/javascript.svg',
+      },
+      {
+        id: 4,
+        name: 'Html',
+        path: './assets/coding/html.svg',
+      },
+      {
+        id: 5,
+        name: 'Vite',
+        path: './assets/coding/vite.svg',
+      },
+      {
+        id: 6,
+        name: 'Node.js',
+        path: './assets/coding/nodejs.svg',
+      },
+      {
+        id: 7,
+        name: 'Express',
+        path: './assets/coding/express.svg',
+      },
+      {
+        id: 8,
+        name: 'MongoDB',
+        path: './assets/coding/mongodb.svg',
+      },
+      {
+        id: 9,
+        name: 'Socket.io',
+        path: './assets/coding/socketio.svg',
+      },
+    ],
+  },
+  {
     title: 'GitHub Profile Readme',
     desc: 'A personal and interactive GitHub profile readme showcasing skills, projects, and achievements through visually engaging elements.',
     subdesc:
@@ -97,8 +159,18 @@ export const myProjects = [
     tags: [
       {
         id: 1,
+        name: 'Markdown',
+        path: './assets/coding/markdown.svg',
+      },
+      {
+        id: 2,
         name: 'Html',
         path: './assets/coding/html.svg',
+      },
+      {
+        id: 3,
+        name: 'Css',
+        path: './assets/coding/css.svg',
       },
     ],
   },
