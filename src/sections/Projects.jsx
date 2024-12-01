@@ -8,24 +8,20 @@ import { myProjects } from '../constants/index.js';
 import CanvasLoader from '../components/Loading.jsx';
 import DemoComputer from '../components/DemoComputer.jsx';
 
-const projectCount = myProjects.length;
-
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
   const handleNavigation = (direction) => {
-    setSelectedProjectIndex((prevIndex) => {
-      if (direction === 'previous') {
-        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
-      } else {
-        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
-      }
-    });
+    setSelectedProjectIndex((prevIndex) =>
+      direction === 'previous'
+        ? (prevIndex - 1 + myProjects.length) % myProjects.length
+        : (prevIndex + 1) % myProjects.length
+    );
   };
 
   useGSAP(() => {
     gsap.fromTo(
-      `.animatedText`,
+      '.animatedText',
       { opacity: 0 },
       { opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.inOut' }
     );
@@ -39,13 +35,11 @@ const Projects = () => {
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
-          <div className="absolute top-0 right-0">
-            <img
-              src={currentProject.spotlight}
-              alt="spotlight"
-              className="w-full h-96 object-cover rounded-xl"
-            />
-          </div>
+          <img
+            src={currentProject.spotlight}
+            alt="spotlight"
+            className="absolute top-0 right-0 w-full h-96 object-cover rounded-xl"
+          />
 
           <div
             className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg"
@@ -56,7 +50,6 @@ const Projects = () => {
 
           <div className="flex flex-col gap-5 text-white-600 my-5">
             <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
-
             <p className="animatedText">{currentProject.desc}</p>
             <p className="animatedText">{currentProject.subdesc}</p>
           </div>
@@ -80,12 +73,17 @@ const Projects = () => {
           </a>
 
           <div className="flex justify-between items-center mt-7">
-            <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
-              <img src="./assets/left-arrow.png" alt="left arrow" />
+            <button
+              className="arrow-btn flex items-center justify-center"
+              onClick={() => handleNavigation('previous')}
+            >
+              <img src="./assets/left-arrow.png" alt="previous project" />
             </button>
-
-            <button className="arrow-btn" onClick={() => handleNavigation('next')}>
-              <img src="./assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
+            <button
+              className="arrow-btn flex items-center justify-center"
+              onClick={() => handleNavigation('next')}
+            >
+              <img src="./assets/right-arrow.png" alt="next project" className="w-4 h-4" />
             </button>
           </div>
         </div>
