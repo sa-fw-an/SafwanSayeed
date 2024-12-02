@@ -39,53 +39,6 @@ export const clientReviews = [
 
 export const myProjects = [
   {
-    title: '3D Web Models Portfolio',
-    desc: 'A visually stunning portfolio showcasing intricate 3D web models with a focus on responsive design and exceptional user interface.',
-    subdesc:
-    'This portfolio features a collection of cool and interactive 3D models, allowing users to explore and engage with each design. Built with HTML, CSS, JavaScript, and other cutting-edge technologies, the site ensures a seamless experience across devices, highlighting creativity and technical prowess in 3D modeling and web development.',
-    href: 'https://github.com/sa-fw-an/Portfolio',
-    texture: './textures/project/3dportfolio.mp4',
-    logo: './assets/project/portfolio-logo.svg',
-    logoStyle: {
-      backgroundColor: '#2A1816',
-      border: '0.2px solid #36201D',
-      boxShadow: '0px 0px 60px 0px #AA3C304D',
-    },
-    spotlight: './assets/spotlight5.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: './assets/coding/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: './assets/coding/tailwind.svg',
-      },
-      {
-        id: 3,
-        name: 'JavaScript',
-        path: './assets/coding/javascript.svg',
-      },
-      {
-        id: 4,
-        name: 'Html',
-        path: './assets/coding/html.svg',
-      },
-      {
-        id: 5,
-        name: 'Vite',
-        path: './assets/coding/vite.svg',
-      },
-      {
-        id: 6,
-        name: 'Framer Motion',
-        path: './assets/coding/framer.svg',
-      },
-    ],
-  },
-  {
     title: 'MERN Chat App',
     desc: 'A real-time chat application built with the MERN stack, featuring user authentication, private messaging, and dynamic updates.',
     subdesc:
@@ -148,34 +101,49 @@ export const myProjects = [
     ],
   },
   {
-    title: 'GitHub Profile Readme',
-    desc: 'A personal and interactive GitHub profile readme showcasing skills, projects, and achievements through visually engaging elements.',
+    title: '3D Web Models Portfolio',
+    desc: 'A visually stunning portfolio showcasing intricate 3D web models with a focus on responsive design and exceptional user interface.',
     subdesc:
-      'This GitHub readme highlights core skills, active project contributions, and connection links with embedded stats, technology icons, and dynamic features like a custom snake animation tracking profile contributions. Built with Markdown, custom icons, and GitHub Actions, it offers an engaging overview, providing visitors with a clear sense of expertise and activity in web and blockchain development, among other areas. Perfect for staying connected and showcasing coding contributions in a fun, dynamic way.',
-    href: 'https://github.com/sa-fw-an/sa-fw-an',
-    texture: './textures/project/gitreadme.mp4',
-    logo: './assets/project/gitreadme-logo.svg',
+    'This portfolio features a collection of cool and interactive 3D models, allowing users to explore and engage with each design. Built with HTML, CSS, JavaScript, and other cutting-edge technologies, the site ensures a seamless experience across devices, highlighting creativity and technical prowess in 3D modeling and web development.',
+    href: 'https://github.com/sa-fw-an/Portfolio',
+    texture: './textures/project/3dportfolio.mp4',
+    logo: './assets/project/portfolio-logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
-    spotlight: './assets/spotlight2.png',
+    spotlight: './assets/spotlight5.png',
     tags: [
       {
         id: 1,
-        name: 'Markdown',
-        path: './assets/coding/markdown.svg',
+        name: 'React.js',
+        path: './assets/coding/react.svg',
       },
       {
         id: 2,
+        name: 'TailwindCSS',
+        path: './assets/coding/tailwind.svg',
+      },
+      {
+        id: 3,
+        name: 'JavaScript',
+        path: './assets/coding/javascript.svg',
+      },
+      {
+        id: 4,
         name: 'Html',
         path: './assets/coding/html.svg',
       },
       {
-        id: 3,
-        name: 'Css',
-        path: './assets/coding/css.svg',
+        id: 5,
+        name: 'Vite',
+        path: './assets/coding/vite.svg',
+      },
+      {
+        id: 6,
+        name: 'Framer Motion',
+        path: './assets/coding/framer.svg',
       },
     ],
   },
@@ -222,6 +190,38 @@ export const myProjects = [
     ],
   },
   {
+    title: 'GitHub Profile Readme',
+    desc: 'A personal and interactive GitHub profile readme showcasing skills, projects, and achievements through visually engaging elements.',
+    subdesc:
+      'This GitHub readme highlights core skills, active project contributions, and connection links with embedded stats, technology icons, and dynamic features like a custom snake animation tracking profile contributions. Built with Markdown, custom icons, and GitHub Actions, it offers an engaging overview, providing visitors with a clear sense of expertise and activity in web and blockchain development, among other areas. Perfect for staying connected and showcasing coding contributions in a fun, dynamic way.',
+    href: 'https://github.com/sa-fw-an/sa-fw-an',
+    texture: './textures/project/gitreadme.mp4',
+    logo: './assets/project/gitreadme-logo.svg',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: './assets/spotlight2.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Markdown',
+        path: './assets/coding/markdown.svg',
+      },
+      {
+        id: 2,
+        name: 'Html',
+        path: './assets/coding/html.svg',
+      },
+      {
+        id: 3,
+        name: 'Css',
+        path: './assets/coding/css.svg',
+      },
+    ],
+  },
+  {
     title: 'Snake Game',
     desc: 'Snake Game is a modern take on the classic arcade game where players guide a snake to collect food and grow longer while avoiding obstacles.',
     subdesc:
@@ -229,28 +229,6 @@ export const myProjects = [
     href: 'https://github.com/sa-fw-an/SnakeGame',
     texture: './textures/project/snakegame.mp4',
     logo: './assets/project/snake-logo.svg',
-    logoStyle: {
-      backgroundColor: '#2A1816',
-      border: '0.2px solid #36201D',
-      boxShadow: '0px 0px 60px 0px #AA3C304D',
-    },
-    spotlight: './assets/spotlight3.png',
-    tags: [
-      {
-        id: 1,
-        name: 'Python',
-        path: './assets/coding/python.svg',
-      },
-    ],
-  },
-  {
-    title: 'Generate Fake GitHub Contributions',
-    desc: 'A script to simulate a more active GitHub profile by creating random commit activity over a defined date range, enhancing profile visuals with commit streaks.',
-    subdesc:
-      'This script lets users generate commits on random dates to give the appearance of consistent activity on their GitHub profile. With options to set the number of commits per day, it pushes these to the main branch and cleans up afterward for a seamless look. Ideal for enhancing profile aesthetics, this tool offers flexibility while respecting ethical use boundaries.',
-    href: 'https://github.com/sa-fw-an/GitFakeContribution',
-    texture: './textures/project/gitcontribution.mp4',
-    logo: './assets/project/gitcontributions-logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -294,6 +272,28 @@ export const myProjects = [
         id: 3,
         name: 'JavaScript',
         path: './assets/coding/javascript.svg',
+      },
+    ],
+  },
+  {
+    title: 'Generate Fake GitHub Contributions',
+    desc: 'A script to simulate a more active GitHub profile by creating random commit activity over a defined date range, enhancing profile visuals with commit streaks.',
+    subdesc:
+      'This script lets users generate commits on random dates to give the appearance of consistent activity on their GitHub profile. With options to set the number of commits per day, it pushes these to the main branch and cleans up afterward for a seamless look. Ideal for enhancing profile aesthetics, this tool offers flexibility while respecting ethical use boundaries.',
+    href: 'https://github.com/sa-fw-an/GitFakeContribution',
+    texture: './textures/project/gitcontribution.mp4',
+    logo: './assets/project/gitcontributions-logo.svg',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: './assets/spotlight3.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Python',
+        path: './assets/coding/python.svg',
       },
     ],
   },
