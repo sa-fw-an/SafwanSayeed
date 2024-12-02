@@ -101,7 +101,7 @@ export const myProjects = [
     ],
   },
   {
-    title: '3D Web Models Portfolio',
+    title: '3D Models Website',
     desc: 'A visually stunning portfolio showcasing intricate 3D web models with a focus on responsive design and exceptional user interface.',
     subdesc:
     'This portfolio features a collection of cool and interactive 3D models, allowing users to explore and engage with each design. Built with HTML, CSS, JavaScript, and other cutting-edge technologies, the site ensures a seamless experience across devices, highlighting creativity and technical prowess in 3D modeling and web development.',
@@ -148,7 +148,7 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Flask Blog',
+    title: 'Flask Blog Website',
     desc: 'A dynamic blog website developed using Flask, featuring SQL for database management and a user-friendly interface built with HTML and CSS.',
     subdesc:
       'This blog application allows users to create, update, delete, and link posts effortlessly. With a clean and responsive design, users can easily navigate through articles, engage with content, and manage their posts seamlessly. The integration of SQL ensures efficient data handling, making it a robust platform for blogging.',
@@ -244,8 +244,8 @@ export const myProjects = [
     ],
   },
   {
-    title: 'BirthdayWish',
-    desc: 'BirthdayWish is a vibrant web application designed to help you send heartfelt birthday wishes to your loved ones.',
+    title: 'Birthday Wish Website',
+    desc: 'Birthday Wish is a vibrant web application designed to help you send heartfelt birthday wishes to your loved ones.',
     subdesc:
       'Featuring lively music and captivating animations, the website allows users to create personalized birthday messages that are both fun and memorable. Built using HTML, CSS, and JavaScript, BirthdayWish combines creativity with technology, making it easy to celebrate special moments with style.',
     href: 'https://sa-fw-an.github.io/BirthdayWish/',
@@ -298,8 +298,8 @@ export const myProjects = [
     ],
   },
   {
-    title: 'WatchTry',
-    desc: 'WatchTry is an innovative mobile application that allows users to experience a wide range of watches virtually, enabling them to visualize how each watch looks on their wrist without making a purchase.',
+    title: 'Watch TryOn AR App',
+    desc: 'Watch TryOn is an innovative mobile application that allows users to experience a wide range of watches virtually, enabling them to visualize how each watch looks on their wrist without making a purchase.',
     subdesc:
       'With advanced augmented reality (AR) technology, WatchTry lets users browse through an extensive collection of watches, select their favorites, and see them in real time. The app provides a user-friendly interface, detailed watch specifications, and the option to share their virtual try-ons with friends, making the watch shopping experience engaging and informed.',
     href: 'https://github.com/sa-fw-an/ARTryOn',
