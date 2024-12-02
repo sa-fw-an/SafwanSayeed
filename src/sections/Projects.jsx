@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Suspense, useState } from 'react';
@@ -30,7 +31,7 @@ const Projects = () => {
   const currentProject = myProjects[selectedProjectIndex];
 
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20" id="projects">
       <p className="head-text">My Projects</p>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
@@ -55,8 +56,8 @@ const Projects = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-3 overflow-x-auto">
-            {currentProject.tags.map((tag, index) => (
-              <div key={index} className="tech-logo flex justify-center items-center">
+            {currentProject.tags.map((tag) => (
+              <div key={tag.name} className="tech-logo flex justify-center items-center">
                 <img src={tag.path} alt={tag.name} className="object-contain" />
               </div>
             ))}
@@ -90,8 +91,8 @@ const Projects = () => {
 
         <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
           <Canvas>
-            <ambientLight intensity={Math.PI} />
-            <directionalLight position={[10, 10, 5]} />
+            <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 5]} intensity={3} />
             <Center>
               <Suspense fallback={<CanvasLoader />}>
                 <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>

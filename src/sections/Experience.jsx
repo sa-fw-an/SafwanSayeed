@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Suspense, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
@@ -8,6 +9,10 @@ import { workExperiences } from '../constants/index.js';
 
 const WorkExperience = () => {
   const [animationName, setAnimationName] = useState('idle');
+
+  const handleAnimationChange = (animation) => {
+    setAnimationName(animation.toLowerCase());
+  };
 
   return (
     <section className="c-space my-20" id="work">
@@ -32,14 +37,15 @@ const WorkExperience = () => {
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">
               {workExperiences.map((item, index) => (
                 <div
-                  key={index}
-                  onClick={() => setAnimationName(item.animation.toLowerCase())}
-                  onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
+                  key={item.name}
+                  onClick={() => handleAnimationChange(item.animation)}
+                  onPointerOver={() => handleAnimationChange(item.animation)}
                   onPointerOut={() => setAnimationName('idle')}
-                  className="work-content_container group">
+                  className="work-content_container group"
+                >
                   <div className="flex flex-col h-full justify-start items-center py-2">
                     <div className="work-content_logo">
-                      <img className="w-full h-full" src={item.icon} alt="" />
+                      <img className="w-full h-full" src={item.icon} alt={item.name} />
                     </div>
 
                     <div className="work-content_bar" />

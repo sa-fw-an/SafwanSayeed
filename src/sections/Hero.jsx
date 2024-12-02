@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Leva } from 'leva';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
@@ -42,7 +43,6 @@ const Hero = () => {
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-            {/* Hidden Controls */}
             <Leva hidden />
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
