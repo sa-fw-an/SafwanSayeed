@@ -12,7 +12,7 @@ export const myProjects = [
         border: '0.2px solid #36201D',
         boxShadow: '0px 0px 60px 0px #AA3C304D',
       },
-      spotlight: './assets/spotlight4.png',
+      spotlight: './assets/spotlight3.png',
       tags: [
         {
           id: 1,
@@ -121,7 +121,7 @@ export const myProjects = [
         border: '0.2px solid #36201D',
         boxShadow: '0px 0px 60px 0px #AA3C304D',
       },
-      spotlight: './assets/spotlight4.png',
+      spotlight: './assets/spotlight1.png',
       tags: [
         {
           id: 1,
@@ -163,7 +163,7 @@ export const myProjects = [
         border: '0.2px solid #36201D',
         boxShadow: '0px 0px 60px 0px #AA3C304D',
       },
-      spotlight: './assets/spotlight2.png',
+      spotlight: './assets/spotlight4.png',
       tags: [
         {
           id: 1,
@@ -217,7 +217,7 @@ export const myProjects = [
         border: '0.2px solid #36201D',
         boxShadow: '0px 0px 60px 0px #AA3C304D',
       },
-      spotlight: './assets/spotlight1.png',
+      spotlight: './assets/spotlight2.png',
       tags: [
         {
           id: 1,
@@ -249,7 +249,7 @@ export const myProjects = [
         border: '0.2px solid #36201D',
         boxShadow: '0px 0px 60px 0px #AA3C304D',
       },
-      spotlight: './assets/spotlight3.png',
+      spotlight: './assets/spotlight1.png',
       tags: [
         {
           id: 1,
@@ -271,7 +271,7 @@ export const myProjects = [
         border: '0.2px solid #36201D',
         boxShadow: '0px 0px 60px 0px #AA3C304D',
       },
-      spotlight: './assets/spotlight1.png',
+      spotlight: './assets/spotlight5.png',
       tags: [
         {
           id: 1,
