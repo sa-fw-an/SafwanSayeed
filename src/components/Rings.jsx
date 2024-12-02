@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { Center, useTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
