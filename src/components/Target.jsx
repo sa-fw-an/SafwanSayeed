@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { useGLTF } from '@react-three/drei';
+import { Float, useGLTF } from '@react-three/drei';
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 
@@ -23,9 +23,11 @@ const Target = ({ rotation = [0, Math.PI / 5, 0], scale = 1.5, ...props }) => {
   }, []);
 
   return (
-    <mesh {...props} ref={targetRef} rotation={rotation} scale={scale}>
-      <primitive object={scene} />
-    </mesh>
+    <Float floatIntensity={1}>
+      <mesh {...props} ref={targetRef} rotation={rotation} scale={scale}>
+        <primitive object={scene} />
+      </mesh>
+    </Float>
   );
 };
 
