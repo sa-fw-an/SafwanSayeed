@@ -133,6 +133,10 @@ body {
     .work-content {
       @apply w-full;
     }
+  
+    .work-canvas {
+      height: 250px;
+    }
   }
 
   /* contact section */
