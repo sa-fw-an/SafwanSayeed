@@ -15,8 +15,13 @@ export const socialLinks = [
       alt: "X (Twitter)" 
     },
     { 
+      href: "https://www.instagram.com/safwan_say1", 
+      src: "./assets/social/instagram.svg", 
+      alt: "Instagram" 
+    },
+    { 
       href: "https://reddit.com/u/safwan_say", 
       src: "./assets/social/reddit.svg", 
       alt: "Reddit" 
     },
-  ];
+];
