@@ -1,4 +1,108 @@
 export const myProjects = [
+    // {
+    //   title: 'Name',
+    //   desc: 'Description',
+    //   subdesc:
+    //     'Subdesc',
+    //   href: 'https://github.com/sa-fw-an/Gitrepo',
+    //   texture: './textures/project/project.mp4',
+    //   logo: './assets/project/logo.svg',
+    //   logoStyle: {
+    //     backgroundColor: '#2A1816',
+    //     border: '0.2px solid #36201D',
+    //     boxShadow: '0px 0px 60px 0px #AA3C304D',
+    //   },
+    //   spotlight: './assets/spotlight1.png',
+    //   tags: [
+    //     {
+    //       id: 1,
+    //       name: 'Tech',
+    //       path: './assets/coding/Tech.svg',
+    //     },
+    //   ],
+    // },
+    {
+      title: 'Blockchain Voting System',
+      desc: 'A secure and transparent voting system built on blockchain technology, ensuring integrity and privacy in the electoral process.',
+      subdesc:
+        'This blockchain-based voting system offers a decentralized platform for voters to cast their ballots securely and anonymously. With features like voter registration, ballot creation, and vote counting, the system ensures transparency and trust in the electoral process. Built with Ethereum smart contracts and web3.js, it leverages blockchain technology to prevent fraud and manipulation, making it an ideal solution for fair and reliable elections.',
+      href: 'https://github.com/IlluminatorBlock/Blockchain',
+      texture: './textures/project/voting.mp4',
+      logo: './assets/project/vote-logo.svg',
+      logoStyle: {
+        backgroundColor: '#2A1816',
+        border: '0.2px solid #36201D',
+        boxShadow: '0px 0px 60px 0px #AA3C304D',
+      },
+      spotlight: './assets/spotlight1.png',
+      tags: [
+        {
+          id: 1,
+          name: 'React.js',
+          path: './assets/coding/react.svg',
+        },
+        {
+          id: 2,
+          name: 'Django',
+          path: './assets/coding/django.svg',
+        },
+        {
+          id: 3,
+          name: 'Solidity',
+          path: './assets/coding/solidity.svg',
+        },
+        {
+          id: 4,
+          name: 'TailwindCSS',
+          path: './assets/coding/tailwind.svg',
+        },
+        {
+          id: 5,
+          name: 'Ethereum',
+          path: './assets/coding/ethereum.svg',
+        },
+        {
+          id: 6,
+          name: 'JavaScript',
+          path: './assets/coding/javascript.svg',
+        },
+        {
+          id: 7,
+          name: 'Tensorflow',
+          path: './assets/coding/tensorflow.svg',
+        },
+        {
+          id: 8,
+          name: 'Python',
+          path: './assets/coding/python.svg',
+        },
+        {
+          id: 9,
+          name: 'Html',
+          path: './assets/coding/html.svg',
+        },
+        {
+          id: 10,
+          name: 'Postman',
+          path: './assets/coding/postman.svg',
+        },
+        {
+          id: 11,
+          name: 'Vite',
+          path: './assets/coding/vite.svg',
+        },
+        {
+          id: 12,
+          name: 'Node.js',
+          path: './assets/coding/nodejs.svg',
+        },
+        {
+          id: 13,
+          name: 'Npm',
+          path: './assets/coding/npm.svg',
+        },
+      ],
+    },
     {
       title: 'MERN Chat App',
       desc: 'A real-time chat application built with the MERN stack, featuring user authentication, private messaging, and dynamic updates.',
