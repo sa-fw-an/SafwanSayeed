@@ -39,7 +39,7 @@ const Footer = () => {
       </div>
 
       <p className="text-gray-500 text-center text-sm sm:mt-0">
-        © 2025 Safwan Sayeed. All rights reserved.
+        © 2024 Safwan Sayeed. All rights reserved.
       </p>
     </footer>
   );
