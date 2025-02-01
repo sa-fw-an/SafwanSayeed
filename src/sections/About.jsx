@@ -95,7 +95,6 @@ const About = () => {
             <div className="w-full flex justify-center items-center">
               <RotaryDial />
             </div>
-            <p className="grid-subtext text-center">Try the Rotary Dial</p>
           </div>
         </div>
       </div>

@@ -29,12 +29,16 @@ import tensorflow from '/assets/coding/tensorflow.svg';
 import typescript from '/assets/coding/typescript.svg';
 import unity from '/assets/coding/unity.svg';
 import vite from '/assets/coding/vite.svg';
+import kali from '/assets/coding/kali.svg';
+import debian from '/assets/coding/debian.svg';
+import git from '/assets/coding/git.svg';
 
 const svgList = [
     c,
     cpp,
     csharp,
     css,
+    debian,
     django,
     docker,
     ethereum,
@@ -42,9 +46,11 @@ const svgList = [
     figma,
     flask,
     framer,
+    git,
     html,
     java,
     javascript,
+    kali,
     markdown,
     mongodb,
     nextjs,
