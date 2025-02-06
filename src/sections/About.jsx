@@ -3,7 +3,7 @@ import Globe from 'react-globe.gl';
 
 import Button from '../components/Button.jsx';
 import AnimatedCoding from '../components/AnimatedCoding.jsx';
-import RotaryDial from '../components/RotaryDial.jsx'; // Importing the Rotary Dial Component
+import RotaryDial from '../components/RotaryDial.jsx';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -27,7 +27,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I'm Safwan Sayeed</p>
               <p className="grid-subtext">
-                I am an undergraduate student passionate about coding, specializing in web, game, and Android application development.
+                I am an undergraduate student passionate about coding, specializing in web, game, Android application, and blockchain development. 
                 I enjoy exploring innovative solutions and creating engaging experiences through technology.
               </p>
             </div>
@@ -64,7 +64,11 @@ const About = () => {
             </div>
             <div>
               <p className="grid-headtext">I'm very flexible with time zone communications & locations</p>
-              <p className="grid-subtext">I&apos;m based in India, Bangalore and open to remote work worldwide.</p>
+              <p className="grid-subtext">
+                I'm based in India, Bangalore, but my work knows no borders. 
+                I'm open to remote work opportunities worldwide and excited to collaborate with teams from diverse backgrounds.
+                Feel free to reach out if you're looking for a dedicated and passionate team member!!
+              </p>
               <a href="https://www.linkedin.com/in/safwan-sayeed-6a3a482a9" target="_blank">
                 <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
               </a>
@@ -79,11 +83,13 @@ const About = () => {
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
               <p className="grid-subtext">
-                I love solving problems and building innovative solutions through code.
-                Programming is not just my profession; it's my passion.
-                I enjoy exploring new technologies and continuously enhancing my skills.
-                In my free time, I engage in competitive coding to sharpen my problem-solving abilities and practice ethical hacking to understand security challenges better,
-                all while working on personal projects to create impactful applications.
+                I love solving problems and building innovative solutions through code. Programming is not just my profession; it's my passion. I enjoy exploring new technologies and continuously enhancing my skills.<br></br>
+                In my free time, I engage in:<br></br>
+                  ⦿ Working on personal projects to create impactful applications<br></br>
+                  ⦿ Contributing to open-source projects, giving back to the community and collaborating with fellow developers<br></br>
+                  ⦿ Competitive coding to sharpen my problem-solving abilities<br></br>
+                  ⦿ Ethical hacking to understand security challenges better<br></br>
+                Coding is more than just a job for me - it's a way to learn, grow, and make a difference!
               </p>
             </div>
           </div>
