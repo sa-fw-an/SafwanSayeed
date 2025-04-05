@@ -14,7 +14,16 @@ export default defineConfig({
           }
         },
       },
+      onwarn(warning, warn) {
+        if (warning.code === 'EVAL' && 
+            warning.loc && 
+            warning.loc.file && 
+            warning.loc.file.includes('node_modules/three-stdlib/libs/lottie.js')) {
+          return;
+        }
+        warn(warning);
+      }
     },
-    chunkSizeWarningLimit: 3000,
+    chunkSizeWarningLimit: 5000,
   },
 });
