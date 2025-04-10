@@ -12,10 +12,10 @@ export const workExperiences = [
     {
       id: 2,
       name: 'SuagrLabs',
-      pos: 'Open Source Contributor',
+      pos: 'Open Source (Maintainer/Technical Lead)',
       duration: '2025 - Present',
-      title: "Contributed to the development of SugarLabs and it's projects, a free and open-source learning platform, by resolving bugs, implementing new features, and improving overall user experience.",
-      icon: './assets/work/sugarlabs.jpg',
+      title: "Maintainer and Member of the Sugar Labs organization, I contribute to the development and maintenance of Sugar Labs Web Dev project",
+      icon: './assets/work/sugar.svg',
       animation: 'victory',
     },
     /*{
