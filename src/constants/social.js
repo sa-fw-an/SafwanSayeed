@@ -15,7 +15,7 @@ export const socialLinks = [
       alt: "X (Twitter)" 
     },
     { 
-      href: "https://www.instagram.com/safwan_say1", 
+      href: "https://www.instagram.com/safwan_say25", 
       src: "./assets/social/instagram.svg", 
       alt: "Instagram" 
     },
