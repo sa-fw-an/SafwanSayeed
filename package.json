@@ -19,7 +19,7 @@
     "@react-three/fiber": "^8.18.0",
     "@types/three": "^0.170.0",
     "framer-motion": "^11.18.2",
-    "gsap": "^3.12.7",
+    "gsap": "^3.13.0",
     "leva": "^0.9.36",
     "maath": "^0.10.8",
     "prettier": "^3.5.3",
@@ -27,26 +27,26 @@
     "react-dom": "^18.3.1",
     "react-globe.gl": "^2.33.2",
     "react-responsive": "^10.0.1",
-    "react-router-dom": "^7.5.0",
+    "react-router-dom": "^7.5.3",
     "styled-components": "^6.1.17",
     "three": "^0.171.0",
-    "three-stdlib": "^2.35.14"
+    "three-stdlib": "^2.36.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
     "@react-three/eslint-plugin": "^0.1.2",
-    "@types/react": "^18.3.20",
-    "@types/react-dom": "^18.3.6",
-    "@vitejs/plugin-react": "^4.3.4",
+    "@types/react": "^18.3.21",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.4.1",
     "autoprefixer": "^10.4.21",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-react-refresh": "^0.4.20",
     "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "vite": "^6.2.5"
+    "vite": "^6.3.5"
   },
   "overrides": {
     "inflight": "lru-cache@^7.14.0",
