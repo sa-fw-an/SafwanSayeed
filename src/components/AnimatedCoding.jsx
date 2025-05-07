@@ -1,9 +1,7 @@
-/* eslint-disable react/display-name */
 import React from "react";
 import { motion } from "framer-motion";
 import svgList from "../constants/icons";
 
-// Memoized icon component to prevent unnecessary re-renders
 const Icon = React.memo(({ svg, index }) => (
   <motion.div
     className="relative w-8 h-8 sm:w-12 sm:h-12"
@@ -30,6 +28,8 @@ const Icon = React.memo(({ svg, index }) => (
   </motion.div>
 ));
 
+Icon.displayName = "Icon";
+
 const AnimatedCoding = () => {
   const SVGS_PER_ROW = 5;
   const ROW_HEIGHT = 64;
@@ -54,7 +54,7 @@ const AnimatedCoding = () => {
       >
         {doubledSvgList.map((svg, index) => (
           <div
-            key={`${index}-${svg}`} // Unique key combining index and SVG path
+            key={`${index}-${svg}`}
             className="w-full h-full flex justify-center items-center"
           >
             <Icon svg={svg} index={index} />
