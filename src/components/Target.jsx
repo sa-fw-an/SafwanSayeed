@@ -1,12 +1,12 @@
 /* eslint-disable react/no-unknown-property */
-import { Float, useGLTF } from '@react-three/drei';
-import { useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import { Float, useGLTF } from "@react-three/drei";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
 
 const Target = ({ rotation = [0, Math.PI / 5, 0], scale = 1.5, ...props }) => {
   const targetRef = useRef();
   const { scene } = useGLTF(
-    'https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/target-stand/model.gltf',
+    "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/target-stand/model.gltf",
   );
 
   useEffect(() => {

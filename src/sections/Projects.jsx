@@ -1,30 +1,30 @@
 /* eslint-disable react/no-unknown-property */
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { Suspense, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Center, OrbitControls } from '@react-three/drei';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { Suspense, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Center, OrbitControls } from "@react-three/drei";
 
-import { myProjects } from '../constants/project.js';
-import CanvasLoader from '../components/Loading.jsx';
-import DemoComputer from '../components/DemoComputer.jsx';
+import { myProjects } from "../constants/project.js";
+import CanvasLoader from "../components/Loading.jsx";
+import DemoComputer from "../components/DemoComputer.jsx";
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
   const handleNavigation = (direction) => {
     setSelectedProjectIndex((prevIndex) =>
-      direction === 'previous'
+      direction === "previous"
         ? (prevIndex - 1 + myProjects.length) % myProjects.length
-        : (prevIndex + 1) % myProjects.length
+        : (prevIndex + 1) % myProjects.length,
     );
   };
 
   useGSAP(() => {
     gsap.fromTo(
-      '.animatedText',
+      ".animatedText",
       { opacity: 0 },
-      { opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.inOut' }
+      { opacity: 1, duration: 1, stagger: 0.2, ease: "power2.inOut" },
     );
   }, [selectedProjectIndex]);
 
@@ -46,18 +46,27 @@ const Projects = () => {
             className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg"
             style={currentProject.logoStyle}
           >
-            <img className="w-10 h-10 shadow-sm" src={currentProject.logo} alt="logo" />
+            <img
+              className="w-10 h-10 shadow-sm"
+              src={currentProject.logo}
+              alt="logo"
+            />
           </div>
 
           <div className="flex flex-col gap-5 text-white-600 my-5">
-            <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
+            <p className="text-white text-2xl font-semibold animatedText">
+              {currentProject.title}
+            </p>
             <p className="animatedText">{currentProject.desc}</p>
             <p className="animatedText">{currentProject.subdesc}</p>
           </div>
 
           <div className="flex flex-wrap items-center gap-3 overflow-x-auto">
             {currentProject.tags.map((tag) => (
-              <div key={tag.name} className="tech-logo flex justify-center items-center">
+              <div
+                key={tag.name}
+                className="tech-logo flex justify-center items-center"
+              >
                 <img src={tag.path} alt={tag.name} className="object-contain" />
               </div>
             ))}
@@ -76,15 +85,19 @@ const Projects = () => {
           <div className="flex justify-between items-center mt-7">
             <button
               className="arrow-btn flex items-center justify-center"
-              onClick={() => handleNavigation('previous')}
+              onClick={() => handleNavigation("previous")}
             >
               <img src="./assets/left-arrow.png" alt="previous project" />
             </button>
             <button
               className="arrow-btn flex items-center justify-center"
-              onClick={() => handleNavigation('next')}
+              onClick={() => handleNavigation("next")}
             >
-              <img src="./assets/right-arrow.png" alt="next project" className="w-4 h-4" />
+              <img
+                src="./assets/right-arrow.png"
+                alt="next project"
+                className="w-4 h-4"
+              />
             </button>
           </div>
         </div>

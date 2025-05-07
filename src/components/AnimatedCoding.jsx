@@ -1,21 +1,21 @@
 /* eslint-disable react/display-name */
-import React from 'react';
-import { motion } from 'framer-motion';
-import svgList from '../constants/icons';
+import React from "react";
+import { motion } from "framer-motion";
+import svgList from "../constants/icons";
 
 // Memoized icon component to prevent unnecessary re-renders
 const Icon = React.memo(({ svg, index }) => (
   <motion.div
     className="relative w-8 h-8 sm:w-12 sm:h-12"
-    whileHover={{ 
-      scale: 1.2, 
+    whileHover={{
+      scale: 1.2,
       rotate: 10,
-      transition: { duration: 0.2 } 
+      transition: { duration: 0.2 },
     }}
-    whileTap={{ 
-      scale: 0.8, 
+    whileTap={{
+      scale: 0.8,
       rotate: -10,
-      transition: { duration: 0.2 } 
+      transition: { duration: 0.2 },
     }}
   >
     <img
@@ -24,7 +24,7 @@ const Icon = React.memo(({ svg, index }) => (
       className="w-full h-full object-contain"
       style={{
         filter: "drop-shadow(0 0 2px rgba(0, 0, 0, 0.2))",
-        willChange: "transform"
+        willChange: "transform",
       }}
     />
   </motion.div>
@@ -45,12 +45,12 @@ const AnimatedCoding = () => {
         className="relative w-full max-w-[360px] h-full grid grid-cols-5 gap-4"
         initial={{ y: 0 }}
         animate={{ y: -contentHeight }}
-        transition={{ 
+        transition={{
           duration: animationDuration,
           repeat: Infinity,
-          ease: 'linear'
+          ease: "linear",
         }}
-        style={{ willChange: 'transform' }}
+        style={{ willChange: "transform" }}
       >
         {doubledSvgList.map((svg, index) => (
           <div

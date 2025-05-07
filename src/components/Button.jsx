@@ -1,4 +1,4 @@
-const Button = ({ name, isBeam = false, containerClass = '' }) => (
+const Button = ({ name, isBeam = false, containerClass = "" }) => (
   <button className={`btn ${containerClass}`}>
     {isBeam && (
       <span className="relative flex h-3 w-3">

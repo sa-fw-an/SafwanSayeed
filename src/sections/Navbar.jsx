@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { navLinks } from '../constants/index.js';
+import { useState } from "react";
+import { navLinks } from "../constants/index.js";
 
 const NavItems = ({ onClick = () => {} }) => (
   <ul className="nav-ul">
@@ -23,15 +23,23 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-5 mx-auto c-space">
-          <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
+          <a
+            href="/"
+            className="text-neutral-400 font-bold text-xl hover:text-white transition-colors"
+          >
             Safwan Sayeed
           </a>
 
           <button
             onClick={toggleMenu}
             className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
-            aria-label="Toggle menu">
-            <img src={isOpen ? './assets/close.svg' : './assets/menu.svg'} alt="toggle" className="w-6 h-6" />
+            aria-label="Toggle menu"
+          >
+            <img
+              src={isOpen ? "./assets/close.svg" : "./assets/menu.svg"}
+              alt="toggle"
+              className="w-6 h-6"
+            />
           </button>
 
           <nav className="sm:flex hidden">
@@ -42,7 +50,7 @@ const Navbar = () => {
 
       <div
         className={`nav-sidebar transition-max-height duration-500 ease-in-out overflow-hidden ${
-          isOpen ? 'max-h-screen' : 'max-h-0'
+          isOpen ? "max-h-screen" : "max-h-0"
         }`}
       >
         <nav className="p-5">

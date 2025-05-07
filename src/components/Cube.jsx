@@ -1,11 +1,16 @@
 /* eslint-disable react/no-unknown-property */
-import { useRef, useEffect } from 'react';
-import { Float, useGLTF, useTexture } from '@react-three/drei';
-import gsap from 'gsap';
+import { useRef, useEffect } from "react";
+import { Float, useGLTF, useTexture } from "@react-three/drei";
+import gsap from "gsap";
 
-const Cube = ({ position = [9, -4, 0], rotation = [2.6, 0.8, -1.8], scale = 0.74, ...props }) => {
-  const { nodes } = useGLTF('./models/cube.glb');
-  const texture = useTexture('./textures/cube.png');
+const Cube = ({
+  position = [9, -4, 0],
+  rotation = [2.6, 0.8, -1.8],
+  scale = 0.74,
+  ...props
+}) => {
+  const { nodes } = useGLTF("./models/cube.glb");
+  const texture = useTexture("./textures/cube.png");
   const cubeRef = useRef();
 
   useEffect(() => {
@@ -23,7 +28,7 @@ const Cube = ({ position = [9, -4, 0], rotation = [2.6, 0.8, -1.8], scale = 0.74
 
   const handlePointerOver = () => {
     if (cubeRef.current) {
-      gsap.to(cubeRef.current.rotation, { x: '+=2', y: '+=2', duration: 0.8 });
+      gsap.to(cubeRef.current.rotation, { x: "+=2", y: "+=2", duration: 0.8 });
     }
   };
 
@@ -39,7 +44,13 @@ const Cube = ({ position = [9, -4, 0], rotation = [2.6, 0.8, -1.8], scale = 0.74
 
   return (
     <Float floatIntensity={2}>
-      <group position={position} rotation={rotation} scale={scale} dispose={null} {...props}>
+      <group
+        position={position}
+        rotation={rotation}
+        scale={scale}
+        dispose={null}
+        {...props}
+      >
         <mesh
           ref={cubeRef}
           castShadow
@@ -55,6 +66,6 @@ const Cube = ({ position = [9, -4, 0], rotation = [2.6, 0.8, -1.8], scale = 0.74
   );
 };
 
-useGLTF.preload('./models/cube.glb');
+useGLTF.preload("./models/cube.glb");
 
 export default Cube;

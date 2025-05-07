@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unknown-property */
-import { Center, Float, useTexture } from '@react-three/drei';
-import gsap from 'gsap';
-import { useEffect, useRef } from 'react';
+import { Center, Float, useTexture } from "@react-three/drei";
+import gsap from "gsap";
+import { useEffect, useRef } from "react";
 
 const Rings = ({ position = [0, 0, 0] }) => {
   const refList = useRef([]);
-  const texture = useTexture('./textures/rings.png');
+  const texture = useTexture("./textures/rings.png");
 
   useEffect(() => {
     if (refList.current.length === 0) return;
@@ -40,7 +40,8 @@ const Rings = ({ position = [0, 0, 0] }) => {
                 if (mesh && !refList.current.includes(mesh)) {
                   refList.current.push(mesh);
                 }
-              }}>
+              }}
+            >
               <torusGeometry args={[(index + 1) * 0.5, 0.1]} />
               <meshMatcapMaterial matcap={texture} toneMapped={false} />
             </mesh>

@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/general-sans');
+@import url("https://fonts.cdnfonts.com/css/general-sans");
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +10,7 @@
 
 body {
   background: #010103;
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
 }
 
 @layer utilities {
@@ -103,37 +103,37 @@ body {
   .work-container {
     @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
   }
-  
+
   .work-canvas {
     @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
   }
-  
+
   .work-content {
     @apply col-span-2 rounded-lg bg-black-200 border border-black-300;
   }
-  
+
   .work-content_container {
     @apply grid grid-cols-[auto_1fr] items-start gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg sm:px-5 px-2.5;
   }
-  
+
   .work-content_logo {
     @apply rounded-3xl w-16 h-16 p-2 bg-black-600;
   }
-  
+
   .work-content_bar {
     @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
   }
-  
+
   @media (max-width: 640px) {
     .work-container {
       @apply flex flex-col;
     }
-  
+
     .work-canvas,
     .work-content {
       @apply w-full;
     }
-  
+
     .work-canvas {
       height: 250px;
     }
