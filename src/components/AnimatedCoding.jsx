@@ -32,10 +32,10 @@ const Icon = React.memo(({ svg, index }) => (
 
 const AnimatedCoding = () => {
   const SVGS_PER_ROW = 5;
-  const ROW_HEIGHT = 64; // 48px icon + 16px gap
+  const ROW_HEIGHT = 64;
   const rows = Math.ceil(svgList.length / SVGS_PER_ROW);
   const contentHeight = rows * ROW_HEIGHT;
-  const animationDuration = contentHeight / 12; // 12px per second
+  const animationDuration = contentHeight / 12;
 
   const doubledSvgList = React.useMemo(() => [...svgList, ...svgList], []);
 
