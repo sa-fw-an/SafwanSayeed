@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    name: Test Build
+    name: Build Pages
 
     runs-on: ubuntu-latest
 

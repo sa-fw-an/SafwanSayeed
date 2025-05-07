@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: Build and Deploy to GH-Pages
+    name: Deploy to GH-Pages
 
     runs-on: ubuntu-latest
 
