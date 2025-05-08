@@ -33,7 +33,7 @@ const Footer = () => {
           <img
             src="https://hits.sh/safwansayeed.live.svg?style=round&label= &color=black"
             alt="visitor count"
-            className="h-5 w-6"
+            className="h-5 w-15"
           />
         </div>
       </div>
