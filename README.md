@@ -51,5 +51,6 @@ If you have any questions or would like to get in touch, feel free to reach out:
 - LinkedIn: **https://www.linkedin.com/in/safwan-sayeed-6a3a482a9**
 - Twitter: **https://x.com/safwan_say**
 - Reddit: **https://reddit.com/u/safwan_say/**
+- Instagram: **https://www.instagram.com/safwan_say25**
 
 Thank you for visiting my portfolio!
