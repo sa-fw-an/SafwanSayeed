@@ -3,7 +3,7 @@ export const workExperiences = [
     id: 1,
     name: "Firevera",
     pos: "Software Web Developer",
-    duration: "2024- 1 Month",
+    duration: "Oct 2024 - Nov 2024",
     title:
       "Developed a full-stack web application using Django and Next.js, featuring user authentication, environmental impact calculator, and database management from scratch.",
     icon: "./assets/work/firevera.jpg",
@@ -11,9 +11,9 @@ export const workExperiences = [
   },
   {
     id: 2,
-    name: "SuagrLabs",
+    name: "Sugar Labs",
     pos: "Open Source (Maintainer/Technical Lead)",
-    duration: "2025 - Present",
+    duration: "Feb 2025 - Present",
     title:
       "Maintainer and Member of the Sugar Labs organization, I contribute to the development and maintenance of Sugar Labs Web Dev project",
     icon: "./assets/work/sugar.svg",
