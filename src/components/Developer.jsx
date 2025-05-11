@@ -1,63 +1,60 @@
 /* eslint-disable react/no-unknown-property */
-import React, { useEffect, useRef, useMemo } from "react";
+import React, { useRef, useEffect, useMemo } from "react";
 import { useGraph } from "@react-three/fiber";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 import { SkeletonUtils } from "three-stdlib";
 
-const Developer = ({ animationName = "idle", ...props }) => {
+const DEVELOPER_MODEL = "./models/animations/developer.glb";
+const ANIM_CLIPS = [
+  { name: "idle", path: "./models/animations/idle.fbx" },
+  { name: "salute", path: "./models/animations/salute.fbx" },
+  { name: "clapping", path: "./models/animations/clapping.fbx" },
+  { name: "victory", path: "./models/animations/victory.fbx" },
+];
+
+function Developer({ animationName = "idle", ...props }) {
   const group = useRef();
-  const { scene } = useGLTF("./models/animations/developer.glb");
-  const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
-  const { nodes, materials } = useGraph(clone);
 
-  const { animations: idleAnimation } = useFBX("./models/animations/idle.fbx");
-  const { animations: saluteAnimation } = useFBX(
-    "./models/animations/salute.fbx",
-  );
-  const { animations: clappingAnimation } = useFBX(
-    "./models/animations/clapping.fbx",
-  );
-  const { animations: victoryAnimation } = useFBX(
-    "./models/animations/victory.fbx",
-  );
+  const { scene } = useGLTF(DEVELOPER_MODEL);
+  const clonedScene = useMemo(() => SkeletonUtils.clone(scene), [scene]);
+  const { nodes, materials } = useGraph(clonedScene);
 
-  idleAnimation[0].name = "idle";
-  saluteAnimation[0].name = "salute";
-  clappingAnimation[0].name = "clapping";
-  victoryAnimation[0].name = "victory";
+  const { animations: idleAnims } = useFBX(ANIM_CLIPS[0].path);
+  const { animations: saluteAnims } = useFBX(ANIM_CLIPS[1].path);
+  const { animations: clappingAnims } = useFBX(ANIM_CLIPS[2].path);
+  const { animations: victoryAnims } = useFBX(ANIM_CLIPS[3].path);
 
-  const { actions } = useAnimations(
-    [
-      idleAnimation[0],
-      saluteAnimation[0],
-      clappingAnimation[0],
-      victoryAnimation[0],
-    ],
-    group,
-  );
+  const clips = useMemo(() => {
+    const mapClip = (anims, name) => {
+      const clip = anims[0];
+      clip.name = name;
+      return clip;
+    };
+    return [
+      mapClip(idleAnims, "idle"),
+      mapClip(saluteAnims, "salute"),
+      mapClip(clappingAnims, "clapping"),
+      mapClip(victoryAnims, "victory"),
+    ];
+  }, [idleAnims, saluteAnims, clappingAnims, victoryAnims]);
+
+  const { actions } = useAnimations(clips, group);
 
   useEffect(() => {
-    if (actions[animationName]) {
-      actions[animationName].reset().fadeIn(0.5).play();
-    }
-    return () => {
-      if (actions[animationName]) {
-        actions[animationName].fadeOut(0.5);
-      }
-    };
-  }, [animationName, actions]);
+    const action = actions[animationName];
+    if (!action) return;
+    action.reset().fadeIn(0.5).play();
+    return () => action.fadeOut(0.5);
+  }, [actions, animationName]);
 
   return (
-    <group ref={group} {...props}>
-      <primitive object={clone} />
+    <group ref={group} dispose={null} {...props}>
+      <primitive object={clonedScene} />
     </group>
   );
-};
+}
 
-useGLTF.preload("./models/animations/developer.glb");
-useFBX.preload("./models/animations/idle.fbx");
-useFBX.preload("./models/animations/salute.fbx");
-useFBX.preload("./models/animations/clapping.fbx");
-useFBX.preload("./models/animations/victory.fbx");
+useGLTF.preload(DEVELOPER_MODEL);
+ANIM_CLIPS.forEach(({ path }) => useFBX.preload(path));
 
-export default Developer;
+export default React.memo(Developer);

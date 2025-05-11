@@ -32,15 +32,14 @@ const RotaryDial = () => {
     setRotation(0);
   };
 
+  // Touch handlers: no more preventDefault()
   const handleTouchStart = (e) => {
-    e.preventDefault();
     isDragging.current = true;
     startY.current = e.touches[0].clientY;
     setIsAnimating(false);
   };
 
   const handleTouchMove = (e) => {
-    e.preventDefault();
     if (!isDragging.current) return;
     const deltaY = startY.current - e.touches[0].clientY;
     const newRotation = Math.min(Math.max(deltaY * 2, -150), 0);
@@ -60,151 +59,72 @@ const RotaryDial = () => {
   };
 
   return (
-    <>
-      <style>{`
-        .rotary-dial-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          touch-action: none; /* Prevents default touch actions */
-        }
-        .rotary-dial {
-          position: relative;
-          border-radius: 50%;
-          background: #34495e;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-          cursor: pointer;
-          user-select: none;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          touch-action: none;
-        }
-        .center-circle {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          background: #e74c3c;
-          z-index: 2;
-        }
-        .finger-wheel {
-          position: left;
-          top: 35%;
-          left: 90%;
-          transform: translateX(-50%);
-          width: 80px;
-          height: 20px;
-          background: #7f8c8d;
-          border-radius: 10px;
-          z-index: 3;
-        }
-        .number {
-          position: absolute;
-          color: #ecf0f1;
-          font-size: 1.4rem;
-          font-weight: bold;
-          width: 30px;
-          height: 30px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transform-origin: center;
-        }
-        .copy-container {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          cursor: pointer;
-          margin-top: 1rem;
-          padding: 10px;
-          border-radius: 8px;
-          background: rgba(255, 255, 255, 0.1);
-          transition: background 0.3s;
-        }
-        .copy-container:hover {
-          background: rgba(255, 255, 255, 0.2);
-        }
-        .copy-text {
-          color: #ecf0f1;
-          font-size: 1rem;
-          font-weight: bold;
-        }
-        @media (max-width: 768px) {
-          .rotary-dial {
-            width: 200px !important;
-            height: 200px !important;
-          }
-          .number {
-            font-size: 1.2rem;
-          }
-        }
-      `}</style>
+    <div className="flex flex-col items-center justify-center">
+      <div
+        className="relative rounded-full bg-slate-700 shadow-lg cursor-pointer select-none flex items-center justify-center touch-none"
+        style={{
+          width: dialSize,
+          height: dialSize,
+          transform: `rotate(${rotation}deg)`,
+          transition: isAnimating
+            ? "transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+            : "none",
+          touchAction: "none",
+        }}
+        onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[50px] h-[50px] rounded-full bg-red-600 z-10" />
+        <div className="absolute left-5 transform w-20 h-5 bg-gray-600 rounded-lg" />
 
-      <div className="rotary-dial-container">
-        <div
-          className="rotary-dial"
-          style={{
-            transform: `rotate(${rotation}deg)`,
-            transition: isAnimating
-              ? "transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
-              : "none",
-            width: dialSize,
-            height: dialSize,
-          }}
-          onMouseDown={handleMouseDown}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          <div className="center-circle" />
-          <div className="finger-wheel" />
-          {numbers.map((num, index) => {
-            const angle = index * 36 - 90;
-            const radius = dialSize / 2 - 35;
-            return (
-              <div
-                key={num}
-                className="number"
-                style={{
-                  transform: `
-                    rotate(${angle}deg) 
-                    translate(${radius}px) 
-                    rotate(${-angle}deg)
-                  `,
-                }}
-              >
-                {num}
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="copy-container" onClick={handleCopy}>
-          <svg
-            className="w-6 h-6"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            {hasCopied ? (
-              <path d="M20 6L9 17l-5-5" stroke="#4CAF50" />
-            ) : (
-              <path
-                d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
-                stroke="#ecf0f1"
-              />
-            )}
-          </svg>
-          <span className="copy-text">isafwansayeed@gmail.com</span>
-        </div>
+        {numbers.map((num, index) => {
+          const angle = index * 36 - 90;
+          const radius = dialSize / 2 - 35;
+          return (
+            <div
+              key={num}
+              className="absolute text-gray-100 text-xl font-bold w-[30px] h-[30px] flex items-center justify-center"
+              style={{
+                transform: `
+                  rotate(${angle}deg) 
+                  translate(${radius}px) 
+                  rotate(${-angle}deg)
+                `,
+              }}
+            >
+              {num}
+            </div>
+          );
+        })}
       </div>
-    </>
+
+      <div
+        className="flex items-center gap-2.5 cursor-pointer mt-4 p-2.5 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-300"
+        onClick={handleCopy}
+      >
+        <svg
+          className="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          {hasCopied ? (
+            <path d="M20 6L9 17l-5-5" stroke="#4CAF50" />
+          ) : (
+            <path
+              d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+              stroke="#ecf0f1"
+            />
+          )}
+        </svg>
+        <span className="text-gray-100 text-base font-bold">
+          isafwansayeed@gmail.com
+        </span>
+      </div>
+    </div>
   );
 };
 
