@@ -17,6 +17,16 @@ export const workExperiences = [
     title:
       "Maintainer and Member of the Sugar Labs organization, I contribute to the development and maintenance of Sugar Labs Web Dev project",
     icon: "./assets/work/sugar.svg",
+    animation: "clapping",
+  },
+  {
+    id: 3,
+    name: "Google Summer of Code 2025",
+    pos: "Contributor",
+    duration: "May 2025 - Present",
+    title:
+      "As a GSoC contributor, I built the core execution engine for a block-based musical coding platform—creating a custom interpreter, AST, and real-time scheduler—and honed my systems design and algorithm optimization skills.",
+    icon: "./assets/work/gsoc.svg",
     animation: "victory",
   },
   /*{
