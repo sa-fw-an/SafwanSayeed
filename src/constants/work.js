@@ -30,21 +30,12 @@ export const workExperiences = [
     animation: "victory",
   },
   /*{
-      id: 2,
+      id: x,
       name: 'Company name',
       pos: 'Role',
       duration: 'Time',
       title: "Worked As",
       icon: './assets/yourpic.svg',
-      animation: 'clapping',
-    },
-    {
-      id: 3,
-      name: 'Company name',
-      pos: 'Role',
-      duration: 'Time',
-      title: "Worked As",
-      icon: './assets/yourpic.svg',
-      animation: 'victory',
-    },*/
+      animation: 'clapping/salute/victory',
+    }*/
 ];
