@@ -1,48 +1,43 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import svgList from "../constants/icons";
 
-const Icon = React.memo(({ svg, index }) => (
-  <motion.div
-    className="relative w-8 h-8 sm:w-12 sm:h-12"
-    whileHover={{
-      scale: 1.2,
-      rotate: 10,
-      transition: { duration: 0.2 },
-    }}
-    whileTap={{
-      scale: 0.8,
-      rotate: -10,
-      transition: { duration: 0.2 },
-    }}
-  >
-    <img
-      src={svg}
-      alt={`Tech Icon ${index + 1}`}
-      className="w-full h-full object-contain"
-      style={{
-        filter: "drop-shadow(0 0 2px rgba(0, 0, 0, 0.2))",
-        willChange: "transform",
-      }}
-    />
-  </motion.div>
-));
+const SVGS_PER_ROW = 5;
+const ROW_HEIGHT = 64;
 
-Icon.displayName = "Icon";
+const TechIcon = React.memo(function TechIcon({ svg, index }) {
+  return (
+    <motion.div
+      className="relative w-8 h-8 sm:w-12 sm:h-12"
+      whileHover={{ scale: 1.2, rotate: 10, transition: { duration: 0.2 } }}
+      whileTap={{ scale: 0.8, rotate: -10, transition: { duration: 0.2 } }}
+      style={{ willChange: "transform" }}
+    >
+      <img
+        src={svg}
+        alt={`Tech Icon ${index + 1}`}
+        className="w-full h-full object-contain drop-shadow-md"
+        style={{ willChange: "transform" }}
+      />
+    </motion.div>
+  );
+});
 
-const AnimatedCoding = () => {
-  const SVGS_PER_ROW = 5;
-  const ROW_HEIGHT = 64;
-  const rows = Math.ceil(svgList.length / SVGS_PER_ROW);
+TechIcon.displayName = "TechIcon";
+
+export default function AnimatedCoding() {
+  const doubledSvgList = useMemo(() => [...svgList, ...svgList], []);
+  const rows = useMemo(() => Math.ceil(svgList.length / SVGS_PER_ROW), []);
   const contentHeight = rows * ROW_HEIGHT;
   const animationDuration = contentHeight / 12;
 
-  const doubledSvgList = React.useMemo(() => [...svgList, ...svgList], []);
-
   return (
-    <div className="w-full h-[276px] relative flex justify-center items-center bg-transparent overflow-hidden">
+    <div
+      className="w-full h-[276px] flex justify-center items-center overflow-hidden bg-transparent"
+      style={{ willChange: "transform" }}
+    >
       <motion.div
-        className="relative w-full max-w-[360px] h-full grid grid-cols-5 gap-4"
+        className="grid w-full max-w-[360px] h-full grid-cols-5 gap-4"
         initial={{ y: 0 }}
         animate={{ y: -contentHeight }}
         transition={{
@@ -52,17 +47,15 @@ const AnimatedCoding = () => {
         }}
         style={{ willChange: "transform" }}
       >
-        {doubledSvgList.map((svg, index) => (
+        {doubledSvgList.map((svg, idx) => (
           <div
-            key={`${index}-${svg}`}
-            className="w-full h-full flex justify-center items-center"
+            key={idx}
+            className="flex items-center justify-center w-full h-full"
           >
-            <Icon svg={svg} index={index} />
+            <TechIcon svg={svg} index={idx} />
           </div>
         ))}
       </motion.div>
     </div>
   );
-};
-
-export default AnimatedCoding;
+}
