@@ -25,7 +25,7 @@ export const workExperiences = [
     pos: "Contributor",
     duration: "May 2025 - Present",
     title:
-      "As a GSoC contributor, I built the core execution engine for a block-based musical coding platform—creating a custom interpreter, AST, and real-time scheduler—and honed my systems design and algorithm optimization skills.",
+      "As a GSoC contributor, I am building core execution engine for a block-based musical coding platform—creating a custom interpreter, AST, and real-time scheduler—and honing my systems design and algorithm optimization skills.",
     icon: "./assets/work/gsoc.svg",
     animation: "victory",
   },
