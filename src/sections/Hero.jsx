@@ -13,7 +13,7 @@ import Target from "../components/Target.jsx";
 import CanvasLoader from "../components/Loading.jsx";
 import HeroCamera from "../components/HeroCamera.jsx";
 import { calculateSizes } from "../constants/index.js";
-import { HackerRoom } from "../components/HackerRoom.jsx";
+import { Pad } from "../components/Pad.jsx";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -41,16 +41,17 @@ const Hero = () => {
       </div>
 
       <div className="w-full h-full absolute inset-0">
-        <Canvas className="w-full h-full">
+        <Canvas shadows className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <Leva hidden />
-            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+            {/* moved camera farther back for a wider view */}
+            <PerspectiveCamera makeDefault position={[0, 0, 40]} />
 
             <HeroCamera isMobile={isMobile}>
-              <HackerRoom
+              <Pad
                 scale={sizes.deskScale}
                 position={sizes.deskPosition}
-                rotation={[0.1, -Math.PI, 0]}
+                rotation={[0.3, 0, 0]}
               />
             </HeroCamera>
 
@@ -61,8 +62,9 @@ const Hero = () => {
               <Cube position={sizes.cubePosition} />
             </group>
 
-            <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={0.5} />
+            <ambientLight intensity={2} />
+            <directionalLight position={[10, 10, 10]} intensity={2} />
+            <pointLight position={[0, 8, 15]} intensity={1} color="#ffffff" />
           </Suspense>
         </Canvas>
       </div>
