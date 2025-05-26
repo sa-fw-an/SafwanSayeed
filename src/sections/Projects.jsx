@@ -34,8 +34,8 @@ const Projects = () => {
     <section className="c-space my-20" id="projects">
       <p className="head-text">My Projects</p>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
+      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full ">
+        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 text-[#BEC1CF]">
           <img
             src={currentProject.spotlight}
             alt="spotlight"
@@ -61,11 +61,11 @@ const Projects = () => {
             <p className="animatedText">{currentProject.subdesc}</p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 overflow-x-auto">
+          <div className="flex flex-wrap items-center gap-3 overflow-x-auto ">
             {currentProject.tags.map((tag) => (
               <div
                 key={tag.name}
-                className="tech-logo flex justify-center items-center"
+                className="tech-logo flex justify-center items-center "
               >
                 <img src={tag.path} alt={tag.name} className="object-contain" />
               </div>
@@ -73,13 +73,13 @@ const Projects = () => {
           </div>
 
           <a
-            className="flex items-center gap-2 cursor-pointer text-white-600 mt-5"
+            className="flex items-center gap-2 cursor-pointer text-white-600 mt-5 text-white"
             href={currentProject.href}
             target="_blank"
             rel="noreferrer"
           >
             <p>Check Out</p>
-            <img src="./assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+            <img src="./assets/arrow-up.png" alt="arrow" className="w-3 h-3 " />
           </a>
 
           <div className="flex justify-between items-center mt-7">
