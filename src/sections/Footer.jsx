@@ -22,7 +22,7 @@ const Footer = () => {
               <img
                 src={link.src}
                 alt={link.alt}
-                className="h-6 w-6 hover:scale-105 hover:translate-y-[-3px] transition-transform duration-500 ease-in-out"
+                className="h-7 w-7 hover:scale-105 hover:translate-y-[-3px] transition-transform duration-500 ease-in-out"
               />
             </a>
           ))}
@@ -33,7 +33,7 @@ const Footer = () => {
           <img
             src="https://hits.sh/safwansayeed.live.svg?style=round&label= &color=black"
             alt="visitor count"
-            className="h-5 w-15"
+            className="h-6 w-12"
           />
         </div>
       </div>
