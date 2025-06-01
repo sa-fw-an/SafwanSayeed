@@ -1,6 +1,13 @@
 import { useState } from "react";
 import Globe from "react-globe.gl";
-
+import {
+  CITIES_DATA,
+  ARCS_DATA,
+  RINGS_DATA,
+  GLOBE_CONFIG,
+  ANIMATION_CONFIG,
+  INITIAL_CAMERA_POSITION,
+} from "../constants/EarthData.js";
 import Button from "../components/Button.jsx";
 import AnimatedCoding from "../components/AnimatedCoding.jsx";
 import RotaryDial from "../components/RotaryDial.jsx";
@@ -31,10 +38,11 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I'm Safwan Sayeed</p>
               <p className="grid-subtext">
-                I am an undergraduate student passionate about coding,
-                specializing in web, game, Android application, and blockchain
-                development. I enjoy exploring innovative solutions and creating
-                engaging experiences through technology.
+                I am an Undergraduate Student pursuing a B.E in Computer Science
+                and Engineering. I am passionate about Coding, specializing in
+                Web, Blockchain development, Game and Android applications. I
+                enjoy exploring innovative solutions and creating engaging
+                experiences through technology.
               </p>
             </div>
           </div>
@@ -48,9 +56,10 @@ const About = () => {
               <p className="grid-subtext">
                 I specialize in a diverse range of languages, frameworks, and
                 tools to build robust and scalable applications. My focus is on
-                creating dynamic user experiences, powerful backend logic, and
-                efficient data management while utilizing modern development
-                tools for seamless deployment.
+                creating dynamic user experiences, beautiful front-end
+                applications, powerful backend logic, and efficient data
+                management while utilizing modern development tools like cloud
+                services for seamless deployment.
               </p>
             </div>
           </div>
@@ -62,21 +71,39 @@ const About = () => {
               <Globe
                 height={326}
                 width={326}
-                backgroundColor="rgba(0, 0, 0, 0)"
-                backgroundImageOpacity={0.5}
-                showAtmosphere
-                showGraticules
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
-                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                labelsData={[
-                  {
-                    lat: 40,
-                    lng: -100,
-                    text: "India, Bangalore",
-                    color: "white",
-                    size: 15,
-                  },
-                ]}
+                {...GLOBE_CONFIG}
+                pointsData={CITIES_DATA}
+                pointColor={() => "#ffffff"}
+                pointAltitude={0.02}
+                pointRadius={(d) => d.size * 0.3 + 0.2}
+                pointsMerge={ANIMATION_CONFIG.pointsMerge}
+                pointsTransitionDuration={
+                  ANIMATION_CONFIG.pointsTransitionDuration
+                }
+                arcsData={ARCS_DATA}
+                arcColor={(d) => d.color}
+                arcDashLength={() => Math.random() * 0.4 + 0.3}
+                arcDashGap={() => Math.random() * 0.3 + 0.1}
+                arcDashAnimateTime={() => 2000 + Math.random() * 3000}
+                arcStroke={() => Math.random() * 0.5 + 0.25}
+                arcsTransitionDuration={ANIMATION_CONFIG.arcsTransitionDuration}
+                arcAltitude={() => Math.random() * 0.4 + 0.1}
+                arcAltitudeAutoScale={ANIMATION_CONFIG.arcAltitudeAutoScale}
+                arcCurveResolution={ANIMATION_CONFIG.arcCurveResolution}
+                arcCircularResolution={ANIMATION_CONFIG.arcCircularResolution}
+                ringsData={RINGS_DATA}
+                ringColor={() =>
+                  `rgba(255,255,255,${Math.random() * 0.4 + 0.2})`
+                }
+                ringMaxRadius="maxR"
+                ringPropagationSpeed="propagationSpeed"
+                ringRepeatPeriod="repeatPeriod"
+                ringResolution={ANIMATION_CONFIG.ringResolution}
+                enablePointerInteraction={
+                  ANIMATION_CONFIG.enablePointerInteraction
+                }
+                lineHoverPrecision={ANIMATION_CONFIG.lineHoverPrecision}
+                pointOfView={INITIAL_CAMERA_POSITION}
               />
             </div>
             <div>
