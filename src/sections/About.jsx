@@ -13,17 +13,6 @@ import AnimatedCoding from "../components/AnimatedCoding.jsx";
 import RotaryDial from "../components/RotaryDial.jsx";
 
 const About = () => {
-  const [hasCopied, setHasCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText("isafwansayeed@gmail.com");
-    setHasCopied(true);
-
-    setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
-  };
-
   return (
     <section className="c-space my-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
