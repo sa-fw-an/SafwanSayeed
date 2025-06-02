@@ -22,6 +22,48 @@ export const myProjects = [
   //   ],
   // },
   {
+    title: "RAG-ChatBot",
+    desc: "A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit, ChromaDB, and LLMs for dynamic Q&A.",
+    subdesc:
+      "This RAG chatbot enables document ingestion (PDF, TXT, DOCX, CSV, JSON), manual text entry, and URL scraping to build a persistent knowledge base in ChromaDB. It integrates configurable LLMs via the Groq API and Sentence-Transformers embeddings to deliver concise, context-aware answers, with optional Google Custom Search augmentation for time-sensitive queries. Conversations are stored in SQLite, and new facts are heuristically extracted and learned automatically.",
+    href: "https://github.com/sa-fw-an/RAG-ChatBot",
+    texture: "./textures/project/rag-chatbot.mov",
+    logo: "./assets/project/chatbot-logo.svg",
+    logoStyle: {
+      backgroundColor: "#0B1624",
+      border: "0.2px solid #1A2433",
+      boxShadow: "0px 0px 60px 0px #2248704D",
+    },
+    spotlight: "./assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "Streamlit",
+        path: "./assets/coding/streamlit.svg",
+      },
+      {
+        id: 2,
+        name: "Python",
+        path: "./assets/coding/python.svg",
+      },
+      {
+        id: 3,
+        name: "SQLite",
+        path: "./assets/coding/sql.svg",
+      },
+      {
+        id: 4,
+        name: "HTML",
+        path: "./assets/coding/html.svg",
+      },
+      {
+        id: 5,
+        name: "CSS",
+        path: "./assets/coding/css.svg",
+      },
+    ],
+  },
+  {
     title: "Blockchain Voting System",
     desc: "A secure and transparent voting system built on blockchain technology, ensuring integrity and privacy in the electoral process.",
     subdesc:
@@ -100,48 +142,6 @@ export const myProjects = [
         id: 13,
         name: "Npm",
         path: "./assets/coding/npm.svg",
-      },
-    ],
-  },
-  {
-    title: "RAG-ChatBot",
-    desc: "A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit, ChromaDB, and LLMs for dynamic Q&A.",
-    subdesc:
-      "This RAG chatbot enables document ingestion (PDF, TXT, DOCX, CSV, JSON), manual text entry, and URL scraping to build a persistent knowledge base in ChromaDB. It integrates configurable LLMs via the Groq API and Sentence-Transformers embeddings to deliver concise, context-aware answers, with optional Google Custom Search augmentation for time-sensitive queries. Conversations are stored in SQLite, and new facts are heuristically extracted and learned automatically.",
-    href: "https://github.com/sa-fw-an/RAG-ChatBot",
-    texture: "./textures/project/rag-chatbot.mov",
-    logo: "./assets/project/chatbot-logo.svg",
-    logoStyle: {
-      backgroundColor: "#0B1624",
-      border: "0.2px solid #1A2433",
-      boxShadow: "0px 0px 60px 0px #2248704D",
-    },
-    spotlight: "./assets/spotlight2.png",
-    tags: [
-      {
-        id: 1,
-        name: "Streamlit",
-        path: "./assets/coding/streamlit.svg",
-      },
-      {
-        id: 2,
-        name: "Python",
-        path: "./assets/coding/python.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "./assets/coding/sql.svg",
-      },
-      {
-        id: 4,
-        name: "HTML",
-        path: "./assets/coding/html.svg",
-      },
-      {
-        id: 5,
-        name: "CSS",
-        path: "./assets/coding/css.svg",
       },
     ],
   },
