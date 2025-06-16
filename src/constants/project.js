@@ -145,6 +145,53 @@ export const myProjects = [
       },
     ],
   },
+    {
+    title: "Markdown Parser",
+    desc: "A powerful Markdown parser built with modern web technologies, enabling seamless conversion of Markdown for live editing and previewing with download options.",
+    subdesc:
+      "This Markdown parser is designed to provide a smooth and efficient editing experience, allowing users to write and preview their Markdown content in real time and download them as needed. Built with React.js, Node.js, and other cutting-edge technologies, it ensures high performance and responsiveness, making it an ideal tool for developers and content creators alike.",
+    href: "https://sa-fw-an.github.io/markdown-parser",
+    texture: "./textures/project/mdparser.mov",
+    logo: "./assets/project/mdparser-logo.svg",
+    logoStyle: {
+      backgroundColor: "#0B1624",
+      border: "0.2px solid #1A2433",
+      boxShadow: "0px 0px 60px 0px #2248704D",
+    },
+    spotlight: "./assets/spotlight5.png",
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "./assets/coding/react.svg",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "./assets/coding/tailwind.svg",
+      },
+      {
+        id: 3,
+        name: "JavaScript",
+        path: "./assets/coding/javascript.svg",
+      },
+      {
+        id: 4,
+        name: "Html",
+        path: "./assets/coding/html.svg",
+      },
+      {
+        id: 5,
+        name: "Vite",
+        path: "./assets/coding/vite.svg",
+      },
+      {
+        id: 6,
+        name: "Framer Motion",
+        path: "./assets/coding/framer.svg",
+      },
+    ],
+  },
   {
     title: "MERN Chat App",
     desc: "A real-time chat application built with the MERN stack, featuring user authentication, private messaging, and dynamic updates.",
@@ -212,7 +259,7 @@ export const myProjects = [
     desc: "A visually stunning portfolio showcasing intricate 3D web models with a focus on responsive design and exceptional user interface.",
     subdesc:
       "This portfolio features a collection of cool and interactive 3D models, allowing users to explore and engage with each design. Built with HTML, CSS, JavaScript, and other cutting-edge technologies, the site ensures a seamless experience across devices, highlighting creativity and technical prowess in 3D modeling and web development.",
-    href: "https://github.com/sa-fw-an/Portfolio",
+    href: "https://sa-fw-an.github.io/Portfolio/",
     texture: "./textures/project/3dportfolio.mp4",
     logo: "./assets/project/portfolio-logo.svg",
     logoStyle: {
