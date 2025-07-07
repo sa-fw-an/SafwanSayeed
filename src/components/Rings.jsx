@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { Center, Float, useTexture } from "@react-three/drei";
+import { Float, useTexture } from "@react-three/drei";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
@@ -30,25 +30,23 @@ const Rings = ({ position = [0, 0, 0] }) => {
   }, [position]);
 
   return (
-    <Center>
-      <Float floatIntensity={1}>
-        <group scale={0.5}>
-          {[...Array(4)].map((_, index) => (
-            <mesh
-              key={index}
-              ref={(mesh) => {
-                if (mesh && !refList.current.includes(mesh)) {
-                  refList.current.push(mesh);
-                }
-              }}
-            >
-              <torusGeometry args={[(index + 1) * 0.5, 0.1]} />
-              <meshMatcapMaterial matcap={texture} toneMapped={false} />
-            </mesh>
-          ))}
-        </group>
-      </Float>
-    </Center>
+    <Float floatIntensity={1}>
+      <group scale={0.5} position={position}>
+        {[...Array(4)].map((_, index) => (
+          <mesh
+            key={index}
+            ref={(mesh) => {
+              if (mesh && !refList.current.includes(mesh)) {
+                refList.current.push(mesh);
+              }
+            }}
+          >
+            <torusGeometry args={[(index + 1) * 0.5, 0.1]} />
+            <meshMatcapMaterial matcap={texture} toneMapped={false} />
+          </mesh>
+        ))}
+      </group>
+    </Float>
   );
 };
 

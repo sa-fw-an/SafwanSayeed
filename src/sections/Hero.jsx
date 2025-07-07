@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unknown-property */
-import { Leva } from "leva";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
@@ -43,7 +42,6 @@ const Hero = () => {
       <div className="w-full h-full absolute inset-0">
         <Canvas shadows className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-            <Leva hidden />
             {/* moved camera farther back for a wider view */}
             <PerspectiveCamera makeDefault position={[0, 0, 40]} />
 
