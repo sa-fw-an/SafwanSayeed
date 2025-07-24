@@ -23,9 +23,9 @@ export const myProjects = [
   // },
   {
     title: "Blockchain Voting System",
-    desc: "A secure and transparent voting system built on blockchain technology, ensuring integrity and privacy in the electoral process.",
+    desc: "A decentralized voting system leveraging blockchain technology to ensure secure, transparent, and anonymous electoral processes.",
     subdesc:
-      "This blockchain-based voting system offers a decentralized platform for voters to cast their ballots securely and anonymously. With features like voter registration, ballot creation, and vote counting, the system ensures transparency and trust in the electoral process. Built with Ethereum smart contracts and web3.js, it leverages blockchain technology to prevent fraud and manipulation, making it an ideal solution for fair and reliable elections.",
+      "This project implements a blockchain-based voting platform using Ethereum smart contracts and web3.js. It provides a decentralized solution for voter registration, ballot creation, and automated vote tallying. By leveraging the inherent immutability and transparency of blockchain, the system effectively prevents electoral fraud and manipulation, establishing a trustworthy environment for conducting fair and reliable elections.",
     href: "https://github.com/IlluminatorBlock/Blockchain",
     texture: "./textures/project/voting.mp4",
     logo: "./assets/project/vote-logo.svg",
@@ -105,9 +105,9 @@ export const myProjects = [
   },
   {
     title: "RAG-ChatBot",
-    desc: "A Retrieval-Augmented Generation (RAG) chatbot built with Streamlit, ChromaDB, and LLMs for dynamic Q&A.",
+    desc: "Developed a Retrieval-Augmented Generation (RAG) chatbot using Streamlit, ChromaDB, and large language models for dynamic, context-aware Q&A.",
     subdesc:
-      "This RAG chatbot enables document ingestion (PDF, TXT, DOCX, CSV, JSON), manual text entry, and URL scraping to build a persistent knowledge base in ChromaDB. It integrates configurable LLMs via the Groq API and Sentence-Transformers embeddings to deliver concise, context-aware answers, with optional Google Custom Search augmentation for time-sensitive queries. Conversations are stored in SQLite, and new facts are heuristically extracted and learned automatically.",
+      "Engineered a sophisticated RAG chatbot capable of ingesting and processing various document formats (PDF, TXT, DOCX) and web URLs to build a persistent knowledge base in ChromaDB. The application integrates configurable LLMs via the Groq API and uses Sentence-Transformers for embeddings to deliver accurate, context-aware responses. It features automatic fact extraction, conversation history management with SQLite, and optional web search augmentation for time-sensitive queries.",
     href: "https://github.com/sa-fw-an/RAG-ChatBot",
     texture: "./textures/project/rag-chatbot.mov",
     logo: "./assets/project/chatbot-logo.svg",
@@ -146,10 +146,42 @@ export const myProjects = [
     ],
   },
   {
-    title: "AI Chat Application",
-    desc: "A sophisticated ChatGPT-like interface with advanced file processing, multiple AI model support, and comprehensive user management built with Next.js 15 and React 19.",
+    title: "Android RAT Tool",
+    desc: "Developed a tool for generating, patching, and managing Android Meterpreter payloads with compatibility for modern Android versions, including Android 15.",
     subdesc:
-      "This AI-powered chat application delivers a complete ChatGPT experience with enhanced capabilities including multi-format file processing (PDFs, images, documents), intelligent document analysis with GPT-4 Vision, and advanced memory systems using vector embeddings. Features include real-time streaming responses, mobile-responsive design with ARIA accessibility compliance, context-aware conversations, and seamless integration with OpenAI's latest models. The application supports PDF text extraction, image analysis, document Q&A, and maintains conversation context across sessions with persistent storage.",
+      "This educational tool streamlines the creation and deployment of Android Meterpreter payloads. It features a command-line interface to build, patch, sign, and manage APKs, and to launch Metasploit handlers. The patching functionality adds a visible UI to payloads, ensuring compatibility and functionality on the latest Android versions. The project demonstrates skills in Python scripting, security tool development, and understanding of Android application structure.",
+    href: "https://github.com/sa-fw-an/Android-RAT",
+    texture: "./textures/project/androidrat.mov",
+    logo: "./assets/project/android-rat-logo.svg",
+    logoStyle: {
+      backgroundColor: "#0D1117",
+      border: "0.2px solid #30363D",
+      boxShadow: "0px 0px 60px 0px #10A37F4D",
+    },
+    spotlight: "./assets/spotlight4.png",
+    tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "./assets/coding/python.svg",
+      },
+      {
+        id: 2,
+        name: "Metasploit",
+        path: "./assets/coding/metasploit.svg",
+      },
+      {
+        id: 3,
+        name: "Debian",
+        path: "./assets/coding/debian.svg",
+      },
+    ],
+  },
+  {
+    title: "AI Chat Application",
+    desc: "Engineered a feature-rich, ChatGPT-like application with advanced file processing, multi-model support, and robust user management using Next.js 15 and React 19.",
+    subdesc:
+      "This AI-powered chat application provides a comprehensive ChatGPT experience with enhanced functionalities. It supports multi-format file processing (PDFs, images, documents), intelligent document analysis with GPT-4 Vision, and an advanced memory system using vector embeddings. The application features real-time streaming responses, a mobile-responsive design with ARIA accessibility, context-aware conversations, and seamless integration with OpenAI's latest models, all built upon a scalable and modern tech stack.",
     href: "https://github.com/sa-fw-an/ChatGpt-Clone",
     texture: "./textures/project/gpt-clone.mp4",
     logo: "./assets/project/gpt-logo.svg",
@@ -214,9 +246,9 @@ export const myProjects = [
   },
   {
     title: "Markdown Parser",
-    desc: "A powerful Markdown parser built with modern web technologies, enabling seamless conversion of Markdown for live editing and previewing with download options.",
+    desc: "Developed a powerful Markdown parser with modern web technologies, enabling live editing, real-time previewing, and file download capabilities.",
     subdesc:
-      "This Markdown parser is designed to provide a smooth and efficient editing experience, allowing users to write and preview their Markdown content in real time and download them as needed. Built with React.js, Node.js, and other cutting-edge technologies, it ensures high performance and responsiveness, making it an ideal tool for developers and content creators alike.",
+      "This Markdown parser provides a seamless editing experience with a feature-rich, dual-panel interface for writing and previewing Markdown content in real time. Built with React and TypeScript, it supports full GitHub Flavored Markdown (GFM), syntax highlighting, custom alerts, and YouTube embeds. The application is designed for high performance and responsiveness, making it an ideal tool for developers and content creators.",
     href: "https://sa-fw-an.github.io/markdown-parser",
     texture: "./textures/project/mdparser.mov",
     logo: "./assets/project/mdparser-logo.svg",
@@ -261,9 +293,9 @@ export const myProjects = [
   },
   {
     title: "MERN Chat App",
-    desc: "A real-time chat application built with the MERN stack, featuring user authentication, private messaging, and dynamic updates.",
+    desc: "Built a full-stack, real-time chat application using the MERN stack, featuring secure user authentication and private messaging.",
     subdesc:
-      "This chat app allows users to create accounts, log in securely, and chat with friends in real time. With a clean and intuitive interface, users can send messages, view online status, and receive notifications for new messages. The app is built with MongoDB, Express.js, React.js, and Node.js, ensuring a seamless experience for users to connect and communicate.",
+      "This chat application enables users to register, log in securely, and engage in real-time conversations. The backend, built with Node.js, Express, and MongoDB, manages user data and messaging, while the React frontend provides a clean and intuitive user interface. Real-time functionality is powered by Socket.io, ensuring instant message delivery and a seamless communication experience.",
     href: "https://github.com/sa-fw-an/ChatApp",
     texture: "./textures/project/chatapp.mp4",
     logo: "./assets/project/chatapp-logo.svg",
@@ -323,9 +355,9 @@ export const myProjects = [
   },
   {
     title: "3D Models Website",
-    desc: "A visually stunning portfolio showcasing intricate 3D web models with a focus on responsive design and exceptional user interface.",
+    desc: "Designed and developed a visually stunning portfolio website to showcase intricate 3D models, with a focus on responsive design and user interaction.",
     subdesc:
-      "This portfolio features a collection of cool and interactive 3D models, allowing users to explore and engage with each design. Built with HTML, CSS, JavaScript, and other cutting-edge technologies, the site ensures a seamless experience across devices, highlighting creativity and technical prowess in 3D modeling and web development.",
+      "This portfolio project features a collection of interactive 3D models, rendered using Three.js. The website is built with modern frontend technologies including React, Vite, and Tailwind CSS, ensuring a seamless and engaging user experience across all devices. It highlights technical skills in 3D modeling, web development, and creating dynamic user interfaces.",
     href: "https://sa-fw-an.github.io/Portfolio/",
     texture: "./textures/project/3dportfolio.mp4",
     logo: "./assets/project/portfolio-logo.svg",
@@ -370,9 +402,9 @@ export const myProjects = [
   },
   {
     title: "Flask Blog Website",
-    desc: "A dynamic blog website developed using Flask, featuring SQL for database management and a user-friendly interface built with HTML and CSS.",
+    desc: "Developed a dynamic, full-featured blog website using the Flask framework, with comprehensive CRUD functionality and user authentication.",
     subdesc:
-      "This blog application allows users to create, update, delete, and link posts effortlessly. With a clean and responsive design, users can easily navigate through articles, engage with content, and manage their posts seamlessly. The integration of SQL ensures efficient data handling, making it a robust platform for blogging.",
+      "This blog application allows users to register, log in, and manage their own posts through a clean and responsive user interface. The backend is powered by Flask and uses Flask-SQLAlchemy for database operations with a SQLite database. The project demonstrates proficiency in backend development, database management, and building secure, user-centric web applications.",
     href: "https://github.com/sa-fw-an/Blog",
     texture: "./textures/project/blog.mp4",
     logo: "./assets/project/blog-logo.svg",
@@ -412,9 +444,9 @@ export const myProjects = [
   },
   {
     title: "GitHub Profile Readme",
-    desc: "A personal and interactive GitHub profile readme showcasing skills, projects, and achievements through visually engaging elements.",
+    desc: "Curated a personal and interactive GitHub profile README to effectively showcase skills, projects, and contributions in a visually engaging format.",
     subdesc:
-      "This GitHub readme highlights core skills, active project contributions, and connection links with embedded stats, technology icons, and dynamic features like a custom snake animation tracking profile contributions. Built with Markdown, custom icons, and GitHub Actions, it offers an engaging overview, providing visitors with a clear sense of expertise and activity in web and blockchain development, among other areas. Perfect for staying connected and showcasing coding contributions in a fun, dynamic way.",
+      "This project involved designing and implementing a dynamic GitHub profile README using Markdown and GitHub Actions. It features embedded statistics, technology icons, and a custom snake animation to visualize contribution activity. The goal was to create an engaging and informative overview of my technical expertise and development activities, providing visitors with a clear and compelling summary of my skills.",
     href: "https://github.com/sa-fw-an/sa-fw-an",
     texture: "./textures/project/gitreadme.mp4",
     logo: "./assets/project/gitreadme-logo.svg",
@@ -444,9 +476,9 @@ export const myProjects = [
   },
   {
     title: "Snake Game",
-    desc: "Snake Game is a modern take on the classic arcade game where players guide a snake to collect food and grow longer while avoiding obstacles.",
+    desc: "Developed a modern version of the classic Snake game using Python and the Pygame library, featuring scoring and a complete game loop.",
     subdesc:
-      "Built with Python and Pygame, this game challenges players to navigate a snake using simple controls while collecting food and increasing in size. The objective is to survive as long as possible without hitting the walls or the snakes own body. With vibrant visuals and smooth gameplay, Snake Game offers a fun, nostalgic experience for all ages.",
+      "This project is an implementation of the classic Snake game, built from scratch using Python and Pygame. It features responsive controls, a scoring system, and a game-over screen with options to restart or quit. The game showcases skills in object-oriented programming, game logic development, and handling user input and graphics rendering within a game loop.",
     href: "https://github.com/sa-fw-an/SnakeGame",
     texture: "./textures/project/snakegame.mp4",
     logo: "./assets/project/snake-logo.svg",
@@ -466,9 +498,9 @@ export const myProjects = [
   },
   {
     title: "Birthday Wish Website",
-    desc: "Birthday Wish is a vibrant web application designed to help you send heartfelt birthday wishes to your loved ones.",
+    desc: "Created a vibrant and interactive web application for sending personalized birthday wishes, featuring music and captivating animations.",
     subdesc:
-      "Featuring lively music and captivating animations, the website allows users to create personalized birthday messages that are both fun and memorable. Built using HTML, CSS, and JavaScript, BirthdayWish combines creativity with technology, making it easy to celebrate special moments with style.",
+      "This project is a creative frontend application designed to deliver memorable birthday greetings. Built using HTML, CSS, and JavaScript, it combines engaging animations and background music to create a fun and personalized experience. The site is fully responsive and demonstrates skills in frontend development, animation, and creating user-centric interactive experiences.",
     href: "https://sa-fw-an.github.io/BirthdayWish/",
     texture: "./textures/project/birthday.mp4",
     logo: "./assets/project/birthday-logo.svg",
@@ -498,9 +530,9 @@ export const myProjects = [
   },
   {
     title: "Generate Fake GitHub Contributions",
-    desc: "A script to simulate a more active GitHub profile by creating random commit activity over a defined date range, enhancing profile visuals with commit streaks.",
+    desc: "Developed a Python script to programmatically generate Git commits, simulating consistent activity on a GitHub profile.",
     subdesc:
-      "This script lets users generate commits on random dates to give the appearance of consistent activity on their GitHub profile. With options to set the number of commits per day, it pushes these to the main branch and cleans up afterward for a seamless look. Ideal for enhancing profile aesthetics, this tool offers flexibility while respecting ethical use boundaries.",
+      "This script automates the process of creating and pushing commits with randomized dates and times over a specified period. It is designed to visually enhance a GitHub contribution graph by simulating a more active development history. The project demonstrates proficiency in scripting with Python, interacting with the command line, and automating Git workflows for profile enhancement purposes.",
     href: "https://github.com/sa-fw-an/GitFakeContribution",
     texture: "./textures/project/gitcontribution.mp4",
     logo: "./assets/project/gitcontributions-logo.svg",
@@ -520,9 +552,9 @@ export const myProjects = [
   },
   {
     title: "Watch TryOn AR App",
-    desc: "Watch TryOn is an innovative mobile application that allows users to experience a wide range of watches virtually, enabling them to visualize how each watch looks on their wrist without making a purchase.",
+    desc: "Developed an innovative AR mobile application allowing users to virtually try on watches, enhancing the online shopping experience.",
     subdesc:
-      "With advanced augmented reality (AR) technology, WatchTry lets users browse through an extensive collection of watches, select their favorites, and see them in real time. The app provides a user-friendly interface, detailed watch specifications, and the option to share their virtual try-ons with friends, making the watch shopping experience engaging and informed.",
+      "This augmented reality application, built with Unity and C#, enables users to visualize watches on their wrist in real time. The app features a wide collection of virtual watches and provides a user-friendly interface for browsing and trying on different models. This project showcases skills in augmented reality development, mobile application design, and creating immersive, interactive user experiences with Unity.",
     href: "https://github.com/sa-fw-an/ARTryOn",
     texture: "./textures/project/watch.mp4",
     logo: "./assets/project/watch-logo.svg",

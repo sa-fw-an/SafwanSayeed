@@ -3,7 +3,6 @@ import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import { PerspectiveCamera } from "@react-three/drei";
-
 import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
 import ReactLogo from "../components/ReactLogo.jsx";
@@ -42,7 +41,6 @@ const Hero = () => {
       <div className="w-full h-full absolute inset-0">
         <Canvas shadows className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-            {/* moved camera farther back for a wider view */}
             <PerspectiveCamera makeDefault position={[0, 0, 40]} />
 
             <HeroCamera isMobile={isMobile}>
