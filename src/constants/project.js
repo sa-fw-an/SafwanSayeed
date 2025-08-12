@@ -22,6 +22,38 @@ export const myProjects = [
   //   ],
   // },
   {
+    title: "Android RAT Tool",
+    desc: "Developed a tool for generating, patching, and managing Android Meterpreter payloads with compatibility for modern Android versions, including Android 15.",
+    subdesc:
+      "This educational tool streamlines the creation and deployment of Android Meterpreter payloads. It features a command-line interface to build, patch, sign, and manage APKs, and to launch Metasploit handlers. The patching functionality adds a visible UI to payloads, ensuring compatibility and functionality on the latest Android versions. The project demonstrates skills in Python scripting, security tool development, and understanding of Android application structure.",
+    href: "https://github.com/sa-fw-an/Android-RAT",
+    texture: "./textures/project/androidrat.mov",
+    logo: "./assets/project/android-rat-logo.svg",
+    logoStyle: {
+      backgroundColor: "#0D1117",
+      border: "0.2px solid #30363D",
+      boxShadow: "0px 0px 60px 0px #10A37F4D",
+    },
+    spotlight: "./assets/spotlight4.png",
+    tags: [
+      {
+        id: 1,
+        name: "Python",
+        path: "./assets/coding/python.svg",
+      },
+      {
+        id: 2,
+        name: "Metasploit",
+        path: "./assets/coding/metasploit.svg",
+      },
+      {
+        id: 3,
+        name: "Debian",
+        path: "./assets/coding/debian.svg",
+      },
+    ],
+  },
+  {
     title: "Blockchain Voting System",
     desc: "A decentralized voting system leveraging blockchain technology to ensure secure, transparent, and anonymous electoral processes.",
     subdesc:
@@ -142,38 +174,6 @@ export const myProjects = [
         id: 5,
         name: "CSS",
         path: "./assets/coding/css.svg",
-      },
-    ],
-  },
-  {
-    title: "Android RAT Tool",
-    desc: "Developed a tool for generating, patching, and managing Android Meterpreter payloads with compatibility for modern Android versions, including Android 15.",
-    subdesc:
-      "This educational tool streamlines the creation and deployment of Android Meterpreter payloads. It features a command-line interface to build, patch, sign, and manage APKs, and to launch Metasploit handlers. The patching functionality adds a visible UI to payloads, ensuring compatibility and functionality on the latest Android versions. The project demonstrates skills in Python scripting, security tool development, and understanding of Android application structure.",
-    href: "https://github.com/sa-fw-an/Android-RAT",
-    texture: "./textures/project/androidrat.mov",
-    logo: "./assets/project/android-rat-logo.svg",
-    logoStyle: {
-      backgroundColor: "#0D1117",
-      border: "0.2px solid #30363D",
-      boxShadow: "0px 0px 60px 0px #10A37F4D",
-    },
-    spotlight: "./assets/spotlight4.png",
-    tags: [
-      {
-        id: 1,
-        name: "Python",
-        path: "./assets/coding/python.svg",
-      },
-      {
-        id: 2,
-        name: "Metasploit",
-        path: "./assets/coding/metasploit.svg",
-      },
-      {
-        id: 3,
-        name: "Debian",
-        path: "./assets/coding/debian.svg",
       },
     ],
   },
