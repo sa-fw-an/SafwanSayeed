@@ -178,6 +178,33 @@ export const myProjects = [
     ],
   },
   {
+    title: "Jump Ball - Android Game",
+    desc: "Designed and developed an endless runner Android game featuring smooth 60 FPS rendering, progressive difficulty, and persistent high score tracking.",
+    subdesc:
+      "Built with Android Studio, Kotlin, and Jetpack Compose, Jump Ball offers a visually engaging, one-tap control experience. The game features realistic ball physics, beautiful gradient visuals, and accurate collision detection. Progressive gameplay increases speed and challenge over time, while high scores are stored persistently for replay value. Demonstrates expertise in mobile development, UI design, and game logic.",
+    href: "https://github.com/sa-fw-an/JumpBall-Android",
+    texture: "./textures/project/jumpball.mp4",
+    logo: "./assets/project/jumpball-logo.svg",
+    logoStyle: {
+      backgroundColor: "#4285F4",
+      border: "0.2px solid #1A2433",
+      boxShadow: "0px 0px 60px 0px #2248704D",
+    },
+    spotlight: "./assets/spotlight5.png",
+    tags: [
+      {
+        id: 1,
+        name: "Kotlin",
+        path: "./assets/coding/kotlin.svg",
+      },
+      {
+        id: 2,
+        name: "Android Studio",
+        path: "./assets/coding/androidstudio.svg",
+      },
+    ],
+  },
+  {
     title: "AI Chat Application",
     desc: "Engineered a feature-rich, ChatGPT-like application with advanced file processing, multi-model support, and robust user management using Next.js 15 and React 19.",
     subdesc:
