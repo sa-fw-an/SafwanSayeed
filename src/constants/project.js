@@ -381,6 +381,33 @@ export const myProjects = [
     ],
   },
   {
+    title: "Weather Forecast - Android App",
+    desc: "Modern Android app providing real-time weather data and location-based forecasts with an intuitive UI.",
+    subdesc:
+      "Developed using Android Studio, Kotlin, and Jetpack Compose. Features include dynamic weather icons, smooth animations, and API-powered updates for accurate local and global weather information.",
+    href: "https://github.com/sa-fw-an/Weather-Android",
+    texture: "./textures/project/weather.mp4",
+    logo: "./assets/project/weather-logo.svg",
+    logoStyle: {
+      backgroundColor: "#4299E1",
+      border: "0.2px solid #1A2433",
+      boxShadow: "0px 0px 60px 0px #2248704D",
+    },
+    spotlight: "./assets/spotlight3.png",
+    tags: [
+      {
+        id: 1,
+        name: "Android Studio",
+        path: "./assets/coding/androidstudio.svg",
+      },
+      {
+        id: 2,
+        name: "Kotlin",
+        path: "./assets/coding/kotlin.svg",
+      },
+    ],
+  },
+  {
     title: "3D Models Website",
     desc: "Designed and developed a visually stunning portfolio website to showcase intricate 3D models, with a focus on responsive design and user interaction.",
     subdesc:
