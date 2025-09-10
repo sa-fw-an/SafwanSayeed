@@ -11,6 +11,16 @@ export const workExperiences = [
   },
   {
     id: 2,
+    name: "Google Summer of Code 2025",
+    pos: "Contributor",
+    duration: "May 2025 - Sep 2025",
+    title:
+    "As a GSoC contributor, I built a core execution engine for a block-based musical coding platform—creating a custom interpreter, AST, and real-time scheduler—and honing my systems design and algorithm optimization skills.",
+    icon: "./assets/work/gsoc.svg",
+    animation: "victory",
+  },
+  {
+    id: 3,
     name: "Sugar Labs",
     pos: "Open Source (Maintainer/Technical Lead)",
     duration: "Feb 2025 - Present",
@@ -18,16 +28,6 @@ export const workExperiences = [
       "Maintainer and Member of the Sugar Labs organization, I contribute to the development and maintenance of Sugar Labs Web Dev project",
     icon: "./assets/work/sugar.svg",
     animation: "clapping",
-  },
-  {
-    id: 3,
-    name: "Google Summer of Code 2025",
-    pos: "Contributor",
-    duration: "May 2025 - Present",
-    title:
-      "As a GSoC contributor, I am building core execution engine for a block-based musical coding platform—creating a custom interpreter, AST, and real-time scheduler—and honing my systems design and algorithm optimization skills.",
-    icon: "./assets/work/gsoc.svg",
-    animation: "victory",
   },
   /*{
       id: x,
