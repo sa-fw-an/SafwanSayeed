@@ -271,10 +271,11 @@ const Contact = () => {
       {/* Alert */}
       {alert && (
         <div
-          className={`fixed top-6 right-6 px-6 py-4 rounded-lg font-medium z-50 animate-slide-in ${alert.type === "success"
+          className={`fixed top-6 right-6 px-6 py-4 rounded-lg font-medium z-50 animate-slide-in ${
+            alert.type === "success"
               ? "bg-[#81B29A]/20 border border-[#81B29A] text-[#81B29A]"
               : "bg-[#E07A5F]/20 border border-[#E07A5F] text-[#E07A5F]"
-            }`}
+          }`}
         >
           {alert.message}
         </div>
