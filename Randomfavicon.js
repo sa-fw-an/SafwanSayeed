@@ -31,7 +31,7 @@
         function updateFavicon() {
             const faviconLink = document.getElementById('dynamic');
             if (faviconLink) {
-                faviconLink.href = '/favicons/' + favicons[currentIndex];
+                faviconLink.href = 'favicons/' + favicons[currentIndex];
                 currentIndex = (currentIndex + 1) % favicons.length;
             }
         }
