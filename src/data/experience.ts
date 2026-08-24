@@ -1,16 +1,4 @@
-// Experience data extracted from Data folder
-export interface Experience {
-  id: number;
-  company: string;
-  role: string;
-  duration: string;
-  description: string;
-  details: string[];
-  skills: string[];
-  logo?: string;
-}
-
-export const experiences: Experience[] = [
+export const experiences = [
   {
     id: 1,
     company: "Google Summer of Code 2025",
@@ -74,4 +62,6 @@ export const experiences: Experience[] = [
     skills: ["Django", "Next.js", "React", "PostgreSQL", "REST APIs"],
     logo: "/assets/work/firevera.jpg",
   },
-];
+] as const;
+
+export type Experience = (typeof experiences)[number];

@@ -20,4 +20,21 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    // three.js scenes are imperative by design: mutating Object3D transforms
+    // inside useFrame / effects IS the API. The immutability rule can't know
+    // that, so it's scoped off for the 3D layer only.
+    files: ['src/three/**/*.{ts,tsx}'],
+    rules: {
+      'react-hooks/immutability': 'off',
+    },
+  },
+  {
+    // Provider + hook live together on purpose; splitting them would scatter
+    // one small concern across three files for no real fast-refresh gain.
+    files: ['src/lib/router.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 ])

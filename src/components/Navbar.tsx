@@ -1,107 +1,98 @@
-import { useState, useEffect } from "react";
-import { navLinks } from "@/data/skills";
+import { useEffect, useState } from "react";
+import { ROUTES, useRouter, type Route } from "@/lib/router";
+import { cn } from "@/lib/cn";
 
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const LABELS: Record<Route, string> = {
+  "/": "Home",
+  "/work": "Work",
+  "/journey": "Journey",
+  "/studio": "Studio",
+  "/contact": "Contact",
+};
+
+export function Navbar() {
+  const { route, navigate } = useRouter();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    // Freeze the page behind the fullscreen menu.
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
     };
+  }, [open]);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
+  const go = (to: Route) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    setOpen(false);
+    navigate(to);
   };
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-[#0F0F0F]/90 backdrop-blur-xl border-b border-[#363535]"
-            : "bg-transparent"
-        }`}
-      >
-        <div className="max-w-6xl mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            {/* Logo */}
-            <a
-              href="#home"
-              className="font-display text-2xl font-bold text-[#F5F5F5] hover:text-[#E07A5F] transition-colors"
-            >
-              Safwan
-            </a>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex gap-8">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="relative text-sm font-medium text-[#A0A0A0] hover:text-[#F5F5F5] transition-colors py-2 group"
-                >
-                  {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#E07A5F] transition-all duration-300 group-hover:w-full" />
-                </a>
-              ))}
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMobileMenu}
-              className="md:hidden p-2 flex flex-col gap-1.5"
-              aria-label="Toggle menu"
-            >
-              <span
-                className={`block w-6 h-0.5 bg-[#F5F5F5] transition-transform duration-300 ${
-                  isMobileMenuOpen ? "translate-y-2 rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-[#F5F5F5] transition-opacity duration-300 ${
-                  isMobileMenuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-[#F5F5F5] transition-transform duration-300 ${
-                  isMobileMenuOpen ? "-translate-y-2 -rotate-45" : ""
-                }`}
-              />
-            </button>
-          </div>
+      <header className="navbar navbar--solid">
+        <div className="shell navbar__inner">
+          <a
+            href="#/"
+            className="navbar__logo display"
+            onClick={go("/")}
+            aria-label="Home"
+          >
+            SS<span className="navbar__logo-dot">.</span>
+          </a>
+          <nav className="navbar__links" aria-label="Primary">
+            {ROUTES.map((r) => (
+              <a
+                key={r}
+                href={`#${r}`}
+                className={cn(
+                  "navbar__link display",
+                  route === r && "is-active",
+                )}
+                aria-current={route === r ? "page" : undefined}
+                onClick={go(r)}
+              >
+                {LABELS[r]}
+              </a>
+            ))}
+          </nav>
+          <button
+            type="button"
+            className={cn("navbar__burger", open && "is-open")}
+            aria-expanded={open}
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen(!open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
-      </nav>
+      </header>
 
-      {/* Mobile Menu Overlay */}
-      <div
-        className={`fixed inset-0 bg-[#0F0F0F] z-40 transition-transform duration-500 md:hidden ${
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex flex-col items-center justify-center h-full gap-8">
-          {navLinks.map((link) => (
+      {open && (
+        <div className="mobile-menu" role="dialog" aria-label="Navigation menu">
+          {ROUTES.map((r, i) => (
             <a
-              key={link.name}
-              href={link.href}
-              onClick={closeMobileMenu}
-              className="font-display text-3xl text-[#F5F5F5] hover:text-[#E07A5F] transition-colors"
+              key={r}
+              href={`#${r}`}
+              className={cn(
+                "mobile-menu__link display",
+                route === r && "is-active",
+              )}
+              style={{ animationDelay: `${i * 60}ms` }}
+              onClick={go(r)}
             >
-              {link.name}
+              {LABELS[r]}
             </a>
           ))}
         </div>
-      </div>
+      )}
     </>
   );
-};
-
-export default Navbar;
+}

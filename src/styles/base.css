@@ -1,0 +1,350 @@
+/* ------------------------------------------------------------------ */
+/* Base — reset, typography, page texture, shared component classes.   */
+/* One visual law: thick edge border + hard offset shadow + flat fill. */
+/* ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Reserve the scrollbar gutter so the viewport width never jumps when
+   * the scrollbar appears — a width jump re-fits the 3D room and reads
+   * as a size shift. */
+  scrollbar-gutter: stable;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--ink);
+  background-color: var(--bg);
+  /* Graph-paper texture: two hairline gradients, no blur, no gradients-as-decoration */
+  background-image:
+    linear-gradient(var(--grid-line) 2px, transparent 2px),
+    linear-gradient(90deg, var(--grid-line) 2px, transparent 2px);
+  background-size: 32px 32px;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--pop);
+  color: var(--on-pop);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--edge);
+  border: 3px solid var(--bg);
+  border-radius: 8px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Layout                                                            */
+/* ---------------------------------------------------------------- */
+
+.shell {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 32px);
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(56px, 10vw, 110px);
+}
+
+/* First section on a page clears the fixed navbar (home's hero handles
+   its own spacing). */
+main > .section:first-child {
+  padding-top: calc(var(--nav-h) + clamp(40px, 6vw, 72px));
+}
+
+/* ---------------------------------------------------------------- */
+/* Type voices                                                       */
+/* ---------------------------------------------------------------- */
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.hand {
+  font-family: var(--font-hand);
+  font-weight: 600;
+}
+
+/* Stacked hard text-shadow for hero/section titles */
+.title-pop {
+  text-shadow:
+    4px 4px 0 var(--pop),
+    8px 8px 0 var(--edge);
+}
+
+@media (max-width: 720px) {
+  .title-pop {
+    text-shadow:
+      3px 3px 0 var(--pop),
+      6px 6px 0 var(--edge);
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Buttons — physical press physics                                  */
+/* ---------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-height: 44px;
+  padding: 0.7em 1.4em;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 3px solid var(--edge);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.15s cubic-bezier(0.2, 1.4, 0.4, 1),
+    box-shadow 0.15s cubic-bezier(0.2, 1.4, 0.4, 1),
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+.btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn:active {
+  transform: translate(5px, 5px);
+  box-shadow: none;
+}
+
+.btn--accent {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.btn--pop {
+  background: var(--pop);
+  color: var(--on-pop);
+}
+
+.btn--ghost {
+  background: transparent;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn--icon {
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------- */
+/* Chips / stamps / cards / tape                                     */
+/* ---------------------------------------------------------------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.32em 0.85em;
+  font-weight: 700;
+  font-size: 0.82rem;
+  border: 2px solid var(--edge);
+  background: var(--surface);
+  box-shadow: var(--shadow-xs);
+  white-space: nowrap;
+}
+
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.4em 0.9em;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 2px solid var(--edge);
+  background: var(--surface);
+  box-shadow: var(--shadow-xs);
+  transform: rotate(-1.5deg);
+}
+
+.card {
+  background: var(--surface);
+  border: 3px solid var(--edge);
+  box-shadow: var(--shadow-md);
+}
+
+.tape {
+  position: absolute;
+  width: 96px;
+  height: 28px;
+  background: var(--pop);
+  opacity: 0.75;
+  box-shadow: var(--shadow-xs);
+}
+
+.tape--left {
+  top: -14px;
+  left: -26px;
+  rotate: -8deg;
+}
+
+.tape--right {
+  top: -14px;
+  right: -26px;
+  rotate: 8deg;
+}
+
+.polaroid {
+  position: relative;
+  background: var(--surface);
+  border: 3px solid var(--edge);
+  box-shadow: var(--shadow-md);
+  padding: 14px;
+  transition: transform 0.25s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.02) !important;
+}
+
+/* ---------------------------------------------------------------- */
+/* Reveal-on-scroll (paired with useReveal hook adding .in)          */
+/* ---------------------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .dragon__hint {
+    animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ------------------- Theme circular reveal (Birthday port) ------------------- */
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html.theme-reveal::view-transition-old(root) {
+  z-index: 1;
+}
+
+html.theme-reveal::view-transition-new(root) {
+  z-index: 2;
+  animation: reveal-circle 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes reveal-circle {
+  from {
+    clip-path: circle(0 at var(--reveal-x) var(--reveal-y));
+  }
+  to {
+    clip-path: circle(var(--reveal-radius) at var(--reveal-x) var(--reveal-y));
+  }
+}

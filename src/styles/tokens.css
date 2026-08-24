@@ -1,0 +1,107 @@
+/* ------------------------------------------------------------------ */
+/* Design tokens — three full art directions sharing one role grammar. */
+/* --pop is the invariant brand gold across every theme.              */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-body: "Space Grotesk", "Trebuchet MS", Avenir, sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  /* Shared layout metrics */
+  --nav-h: 64px;
+  --radius-organic: 999px;
+
+  /* Hard shadow scale (no blur anywhere in the system) */
+  --shadow-xs: 2px 2px 0 var(--edge);
+  --shadow-sm: 3px 3px 0 var(--edge);
+  --shadow-md: 6px 6px 0 var(--edge);
+  --shadow-lg: 10px 10px 0 var(--edge);
+}
+
+/* ------------------------------- Paper ------------------------------ */
+:root[data-theme="paper"] {
+  color-scheme: light;
+  --bg: #f6e7c8;
+  --surface: #fffdf5;
+  --ink: #102a43;
+  --edge: #102a43;
+  --accent: #b82e0b;
+  --on-accent: #fffdf5;
+  --pop: #ffc928;
+  --on-pop: #102a43;
+  --mint: #00656b;
+  --rose: #d6336c;
+  --muted: #3d5266;
+  --grid-line: rgba(16, 42, 67, 0.09);
+  --overlay: rgba(6, 17, 27, 0.86);
+
+  /* Pet dragon — crimson rider */
+  --pet-body: #cf3f34;
+  --pet-shade: #96261f;
+  --pet-belly: #f39c3f;
+  --pet-wing: #e06a52;
+  --pet-membrane: #a83a2e;
+  --pet-bone: #fffdf5;
+}
+
+/* ------------------------------ Midnight ---------------------------- */
+:root[data-theme="midnight"] {
+  color-scheme: dark;
+  --bg: #061923;
+  --surface: #12303f;
+  --ink: #f8efd9;
+  --edge: #f0d5a0;
+  --accent: #ff9a5c;
+  --on-accent: #081f33;
+  --pop: #ffc928;
+  --on-pop: #081f33;
+  --mint: #69d8d2;
+  --rose: #ff8fab;
+  --muted: #c6baa1;
+  --grid-line: rgba(240, 213, 160, 0.12);
+  --overlay: rgba(2, 8, 13, 0.9);
+
+  /* Pet dragon — ember drake */
+  --pet-body: #ff9a5c;
+  --pet-shade: #b25f33;
+  --pet-belly: #ffd27a;
+  --pet-wing: #ffb37f;
+  --pet-membrane: #c96a3f;
+  --pet-bone: #f8efd9;
+}
+
+/* ------------------------------- Matcha ----------------------------- */
+:root[data-theme="matcha"] {
+  color-scheme: light;
+  --bg: #e8efd9;
+  --surface: #fafff2;
+  --ink: #1d3a2a;
+  --edge: #1d3a2a;
+  --accent: #2e6e4e;
+  --on-accent: #fafff2;
+  --pop: #ffc928;
+  --on-pop: #1d3a2a;
+  --mint: #0fa37f;
+  --rose: #d6606c;
+  --muted: #4a5d50;
+  --grid-line: rgba(29, 58, 42, 0.1);
+  --overlay: rgba(16, 26, 20, 0.88);
+
+  /* Pet dragon — jade wyvern */
+  --pet-body: #3f8f63;
+  --pet-shade: #26573c;
+  --pet-belly: #ffd76a;
+  --pet-wing: #66b489;
+  --pet-membrane: #2f6b4a;
+  --pet-bone: #fafff2;
+}
+
+/* View transition layering: new theme paints over the old snapshot. */
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 2147483646;
+  animation: none;
+}

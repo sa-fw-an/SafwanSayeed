@@ -1,54 +1,47 @@
-# My Portfolio
+# Safwan Sayeed — Portfolio
 
-Welcome to my portfolio! This project showcases my skills and work as a developer. It is built using modern web technologies, including React, Vite, JavaScript, HTML, and Tailwind CSS.
+Personal portfolio of [Safwan Sayeed](https://safwansayeed.in) — software developer
+into web, blockchain, Android, and games.
 
-## Table of Contents
+Built with React 19 + TypeScript + Vite 8. One hand-written semantic CSS system
+(three full color themes: Paper / Midnight / Matcha), zero UI frameworks. The 3D
+workspace diorama (three.js + a Draco-compressed room model) loads in its own lazy
+chunk only when scrolled near, and skips itself entirely on low-end devices.
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Live Demo](#live-demo)
-- [Acknowledgments](#acknowledgments)
-- [Contact](#contact)
+## Stack
 
-## Features
+- **React 19** + **TypeScript**
+- **Vite 8** (Rolldown-powered)
+- Pure CSS custom properties — no Tailwind, no CSS-in-JS
+- **three.js / @react-three/fiber / @react-three/drei** — lazy-loaded diorama only
+- **@emailjs/browser** — contact form
 
-- **Responsive Design:** Built with Tailwind CSS to ensure a seamless experience on all devices.
-- **Fast Performance:** Vite is used for a quick and efficient development environment.
-- **User‑Friendly Navigation:** Smooth and intuitive navigation across sections.
-- **Showcase Projects:** Highlights various projects I've worked on with descriptions and links.
+## Develop
 
-## Technologies Used
+```bash
+npm install
+npm run dev        # dev server (prints the local URL)
+```
 
-- **Frontend:**
-  - React
-  - Vite
-  - JavaScript
-  - HTML
-  - Tailwind CSS
+## Verify & ship
 
-- **Hosting:**
-  - GitHub Pages
+```bash
+npm run lint       # ESLint
+npm run build      # typecheck + production build to dist/
+npm run preview    # serve the production build locally
+npm run deploy     # build + publish dist/ to GitHub Pages (safwansayeed.in)
+```
 
-## Live Demo
+CI runs lint on every push; CD builds and deploys `main` via GitHub Actions.
 
-Check out the live version of my portfolio [here](https://sa-fw-an.github.io/SafwanSayeed/)
+## Structure
 
-## Acknowledgments
-
-- Thanks to the open‑source community for their contributions and resources that helped in the development of this project.
-- Inspiration from various portfolio designs that motivated me to create my own.
-- Special thanks to my mentors and peers who provided feedback and support throughout the development process.
-- Acknowledgment to all the tools and libraries used in this project, which made the development process smoother and more enjoyable.
-
-## Contact
-
-If you have any questions or would like to get in touch, feel free to reach out:
-
-- Email: **isafwansayeed@gmail.com**
-- GitHub: **https://github.com/sa-fw-an/**
-- LinkedIn: **https://www.linkedin.com/in/safwan-sayeed-6a3a482a9**
-- Twitter: **https://x.com/safwan_say**
-- Reddit: **https://reddit.com/u/safwan_say/**
-- Instagram: **https://www.instagram.com/safwan_say25**
-
-Thank you for visiting my portfolio!
+```
+src/
+├── components/   sections + fixed chrome (navbar, hero, projects, pet cat…)
+│   └── ui/       shared primitives (Button, Modal, SectionHeading)
+├── three/        lazy 3D room scene (loaded only when approached)
+├── lib/          theme switching, confetti engine, reveal hook, device tiers
+├── data/         all site content (profile, projects, skills, experience)
+└── styles/       tokens → base → animations → chrome → sections
+```
