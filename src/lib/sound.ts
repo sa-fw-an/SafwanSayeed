@@ -1,4 +1,4 @@
-import { MembraneSynth, PolySynth, Synth, start } from "tone";
+import { getContext, MembraneSynth, PolySynth, Synth, start } from "tone";
 import type { ThemeName } from "@/lib/theme";
 
 /**
@@ -25,7 +25,16 @@ async function boot() {
   if (voice || booting) return;
   booting = true;
   try {
-    await start(); // must run inside a user gesture
+    // Some browsers leave the context suspended even after a gesture;
+    // never wait on it forever, and never queue notes into a suspended
+    // context — they'd all dump at once on a later resume ("stuck music").
+    await Promise.race([
+      start(),
+      new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("audio-boot-timeout")), 2500),
+      ),
+    ]);
+    if (getContext().state !== "running") return;
     voice = {
       synth: new PolySynth(Synth, {
         oscillator: { type: "triangle" },
