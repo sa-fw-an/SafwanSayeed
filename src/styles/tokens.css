@@ -12,6 +12,14 @@
   --nav-h: 64px;
   --radius-organic: 999px;
 
+  /* Theme-reveal geometry — percentages, never px/vw/vh (see revealVars()).
+     Defaults centre the circle and cover the viewport, so a reveal that
+     somehow runs before JS writes them still lands sanely. 150% clears the
+     worst case: a corner origin needs sqrt(2) = 141.4% of the reference. */
+  --reveal-x: 50%;
+  --reveal-y: 50%;
+  --reveal-radius: 150%;
+
   /* Hard shadow scale (no blur anywhere in the system) */
   --shadow-xs: 2px 2px 0 var(--edge);
   --shadow-sm: 3px 3px 0 var(--edge);

@@ -143,6 +143,19 @@
   font-size: 0.8rem;
 }
 
+/* All three faces live in the DOM; CSS picks the one matching the live theme.
+   Keeps the toggle in lockstep with html[data-theme] without a React render
+   inside the view-transition snapshot window. */
+.theme-picker__face {
+  display: none;
+}
+
+html[data-theme="paper"] .theme-picker__face[data-face="paper"],
+html[data-theme="midnight"] .theme-picker__face[data-face="midnight"],
+html[data-theme="matcha"] .theme-picker__face[data-face="matcha"] {
+  display: contents;
+}
+
 .theme-picker__chev {
   font-family: var(--font-body);
   font-size: 0.7rem;
@@ -380,7 +393,8 @@ main {
 }
 
 #reveal-ring.reveal-ring--go {
-  animation: ring-expand 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  /* Same curve as reveal-circle so the ring rides the clip edge exactly. */
+  animation: ring-expand 650ms cubic-bezier(0.33, 0, 0.2, 1) both;
 }
 
 @keyframes ring-expand {

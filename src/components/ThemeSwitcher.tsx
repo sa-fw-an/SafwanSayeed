@@ -26,11 +26,21 @@ const META: Record<
   },
 };
 
-/** Labeled theme picker with a reveal panel — no mystery swatch dots. */
+/**
+ * Labeled theme picker with a reveal panel — no mystery swatch dots.
+ *
+ * Deliberately holds no React state for the active theme: a re-render landing
+ * inside the view-transition snapshot window stalls the first frames of the
+ * reveal, and one landing *before* the old snapshot is captured bakes the new
+ * glyph into the old theme's picture. The toggle therefore carries all three
+ * faces in the DOM and CSS picks one off html[data-theme] (see chrome.css),
+ * and the panel — which only exists while it is open, never during a reveal —
+ * reads the live theme at render time.
+ */
 export function ThemeSwitcher() {
-  const [active, setActive] = useState<ThemeName>(currentTheme());
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
+  const active: ThemeName = currentTheme();
 
   useEffect(() => {
     if (!open) return;
@@ -48,7 +58,7 @@ export function ThemeSwitcher() {
 
   const pick =
     (theme: ThemeName) => (e: React.MouseEvent<HTMLButtonElement>) => {
-      setActive(theme);
+      // No setState for the theme here — see the component note above.
       applyTheme(theme, e.currentTarget);
       setOpen(false);
     };
@@ -62,8 +72,12 @@ export function ThemeSwitcher() {
         aria-haspopup="listbox"
         onClick={() => setOpen(!open)}
       >
-        <span aria-hidden="true">{META[active].glyph}</span>
-        <span className="theme-picker__label">{META[active].label}</span>
+        {THEMES.map((t) => (
+          <span key={t} className="theme-picker__face" data-face={t}>
+            <span aria-hidden="true">{META[t].glyph}</span>
+            <span className="theme-picker__label">{META[t].label}</span>
+          </span>
+        ))}
         <span className="theme-picker__chev" aria-hidden="true">
           {open ? "▴" : "▾"}
         </span>

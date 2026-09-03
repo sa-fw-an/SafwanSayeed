@@ -11,6 +11,14 @@ const KEY = "portfolio-theme";
  */
 const REVEAL_CLASS = "theme-reveal";
 const REVEAL_MS = 650;
+/**
+ * Starts at rest instead of leaving the button at maximum velocity. The old
+ * ease-out (.22, 1, .36, 1) covered 12% of the screen on the first frame and
+ * the whole viewport by half the duration — the second half grew a circle
+ * already off-screen. Keep in sync with reveal-circle (base.css) and
+ * ring-expand (chrome.css).
+ */
+const REVEAL_EASING = "cubic-bezier(0.33, 0, 0.2, 1)";
 
 let revealSeq = 0;
 
@@ -34,8 +42,12 @@ function commit(theme: ThemeName) {
 }
 
 /** Radius from the origin point to the farthest viewport corner. */
-function cornerRadius(x: number, y: number) {
-  const { innerWidth: w, innerHeight: h } = window;
+function cornerRadius(
+  x: number,
+  y: number,
+  w: number = window.innerWidth,
+  h: number = window.innerHeight,
+) {
   return Math.max(
     Math.hypot(x, y),
     Math.hypot(w - x, y),
@@ -44,11 +56,35 @@ function cornerRadius(x: number, y: number) {
   );
 }
 
+/**
+ * The reveal geometry expressed as CSS percentages — never px, and never
+ * vw/vh either (those resolve in CSS pixels and break identically).
+ *
+ * Chromium sizes the ::view-transition pseudo-element's box in DEVICE pixels
+ * while a clip-path length is in CSS pixels. At devicePixelRatio 2 a 1126px
+ * viewport gives a 2252-unit box, so an origin of `915px` lands 915/2252 =
+ * 40.6% across it and — the box being displayed scaled down by 2 — the circle
+ * paints at CSS x=457, exactly half of where it was clicked. Percentages
+ * resolve against the pseudo-element's own box, so they are correct at any
+ * device pixel ratio, zoom level or viewport size.
+ */
+export function revealVars(x: number, y: number, w: number, h: number) {
+  // A circle()'s percentage radius resolves against sqrt(w² + h²) / sqrt(2) —
+  // divide by that reference, not by the width or the height.
+  const radiusReference = Math.hypot(w, h) / Math.SQRT2;
+  return {
+    x: `${(x / w) * 100}%`,
+    y: `${(y / h) * 100}%`,
+    radius: `${(cornerRadius(x, y, w, h) / radiusReference) * 100}%`,
+  };
+}
+
 function setOriginVars(x: number, y: number) {
   const root = document.documentElement;
-  root.style.setProperty("--reveal-x", `${x}px`);
-  root.style.setProperty("--reveal-y", `${y}px`);
-  root.style.setProperty("--reveal-radius", `${cornerRadius(x, y)}px`);
+  const v = revealVars(x, y, window.innerWidth, window.innerHeight);
+  root.style.setProperty("--reveal-x", v.x);
+  root.style.setProperty("--reveal-y", v.y);
+  root.style.setProperty("--reveal-radius", v.radius);
 }
 
 /** No View Transitions API: overlay disc that expands from the click point. */
@@ -75,7 +111,7 @@ function circleFallback(next: ThemeName, x: number, y: number) {
       },
       {
         duration: REVEAL_MS,
-        easing: "cubic-bezier(.22,1,.36,1)",
+        easing: REVEAL_EASING,
         fill: "forwards",
       },
     )
